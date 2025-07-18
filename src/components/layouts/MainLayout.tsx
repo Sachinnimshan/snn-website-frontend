@@ -30,8 +30,8 @@ const MainLayout = () => {
           minWidth: 200.0,
           scale: 1.0,
           scaleMobile: 1.0,
-          color: 0xfacc15, // yellow-400
-          backgroundColor: 0x131921, // slate-900
+          color: 0xfacc15,
+          backgroundColor: 0x131921,
         })
       );
     }
@@ -48,10 +48,8 @@ const MainLayout = () => {
     >
       <Header />
 
-      <main className="flex-grow z-10 relative">
+      <main className="flex-grow z-10 relative ">
         <Outlet />
-
-        {/* Fixed Social Media Icons */}
         <div className="hidden md:flex fixed right-4 top-1/3 z-50 flex-col items-center gap-4 text-yellow-400 bg-black/10 backdrop-blur-md p-5 border border-yellow-400 rounded-lg shadow-lg">
           <a
             href="https://github.com/your-username"

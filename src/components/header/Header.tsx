@@ -19,7 +19,7 @@ const Header = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-md">
+    <header className="fixed top-0 w-full z-50 bg-black/30 backdrop-blur-md">
       <div className="max-w-8xl mx-auto px-6 md:px-12 lg:px-20 py-6 flex items-center justify-between">
         <Link
           to="/"

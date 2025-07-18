@@ -1,13 +1,13 @@
 // src/App.tsx
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./features/Home";
 import MainLayout from "./components/layouts/MainLayout";
-import About from "./pages/About";
-import Projects from "./pages/Projects";
-import Skills from "./pages/Skills";
-import Contact from "./pages/Contact";
-import Experience from "./pages/Experience";
-import Education from "./pages/Education";
+import About from "./features/About";
+import Projects from "./features/Projects";
+import Skills from "./features/Skills";
+import Contact from "./features/Contact";
+import Experience from "./features/Experience";
+import Education from "./features/Education";
 
 function App() {
   return (

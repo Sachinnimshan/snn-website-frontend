@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="relative text-white min-h-screen flex items-center justify-center px-4">
       <motion.div
-        className="max-w-4xl w-full bg-black/10 backdrop-blur-md rounded-xl p-4 md:p-12 shadow-lg z-10"
+        className="max-w-3xl w-full bg-black/10 backdrop-blur-md rounded-xl p-6 md:p-8 shadow-lg z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
