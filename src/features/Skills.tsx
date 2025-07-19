@@ -1,6 +1,5 @@
-import StackIcon from "tech-stack-icons";
-import { skills } from "../components/skills/skills";
 import PageWrapper from "../components/pagewrapper/PageWrapper";
+import { skills } from "../components/skills/skills";
 
 const Skills = () => {
   return (
@@ -8,14 +7,14 @@ const Skills = () => {
       title="Skills"
       description="My skills and technologies I work with"
     >
-      <div className="flex flex-wrap gap-3 mt-6 justify-center">
-        {skills?.map((skill: string) => (
+      <div className="flex flex-wrap gap-4">
+        {skills.map(({ name, icon: Icon }) => (
           <div
-            key={skill}
-            className="flex items-center gap-3 bg-[#131921]/60 px-4 py-2 rounded-full shadow text-sm font-medium border border-gray-400 hover:bg-gray-200 transition-colors cursor-pointer border-2"
+            key={name}
+            className="flex items-center gap-2 border p-5 rounded-xl shadow border-gray-400 hover:bg-yellow-400/10 transition-colors cursor-pointer"
           >
-            <StackIcon name={skill} style={{ width: 28, height: 28 }} />
-            <span className="text-gray-400">{skill.toLocaleUpperCase()}</span>
+            <Icon size={24} className="text-yellow-400" />
+            <span className="text-gray-400">{name}</span>
           </div>
         ))}
       </div>

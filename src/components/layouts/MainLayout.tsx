@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
-import { Github, Linkedin } from "lucide-react";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import ScrollToTop from "./ScrollToTop";
 
 import Home from "../../features/Home";
@@ -85,7 +85,7 @@ const MainLayout = () => {
             className="hover:text-yellow-300 transition border border-yellow-400 p-2 rounded-full hover:bg-yellow-400 hover:text-white"
             aria-label="GitHub"
           >
-            <Github className="w-6 h-6" />
+            <FaGithub className="w-6 h-6" />
           </a>
           <a
             href="https://www.linkedin.com/in/sachin-nimshan/"
@@ -94,7 +94,7 @@ const MainLayout = () => {
             className="hover:text-yellow-300 transition border border-yellow-400 p-2 rounded-full hover:bg-yellow-400 hover:text-white"
             aria-label="LinkedIn"
           >
-            <Linkedin className="w-6 h-6" />
+            <FaLinkedin className="w-6 h-6" />
           </a>
         </div>
       </main>
