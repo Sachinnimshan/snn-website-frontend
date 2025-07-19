@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <main className="relative text-white min-h-screen flex items-center justify-center px-4">
+    <div className="relative text-white min-h-screen flex items-center justify-center px-4 bg-black/40">
       <motion.div
         className="max-w-3xl w-full bg-black/10 backdrop-blur-md rounded-xl p-6 md:p-8 shadow-lg z-10"
         initial={{ opacity: 0 }}
@@ -51,6 +51,6 @@ export default function Home() {
           </div>
         </motion.div>
       </motion.div>
-    </main>
+    </div>
   );
 }

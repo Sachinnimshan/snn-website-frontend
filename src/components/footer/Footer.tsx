@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer
       aria-label="Footer"
-      className="bg-black/30 text-yellow-400 text-center py-4 select-none text-sm font-small"
+      className="bg-black/50 text-yellow-400 text-center py-4 select-none text-sm font-small"
     >
       <div className="flex items-center justify-center gap-2">
         <Copyright size={16} />

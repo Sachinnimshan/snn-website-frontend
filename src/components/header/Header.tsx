@@ -1,14 +1,16 @@
 import { AlignJustify, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Experience", path: "/experience" },
-  { name: "Projects", path: "/projects" },
-  { name: "Skills", path: "/skills" },
-  { name: "Contact", path: "/contact" },
+  { name: "Home", path: "#home" },
+  { name: "About", path: "#about" },
+  { name: "Projects", path: "#projects" },
+  { name: "Skills", path: "#skills" },
+  { name: "Experience", path: "#experience" },
+  { name: "Academic", path: "#academic" },
+  { name: "Certifications", path: "#certifications" },
+  { name: "Contact", path: "#contact" },
 ];
 
 const Header = () => {
@@ -17,22 +19,30 @@ const Header = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  // Prevent body scrolling when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "auto";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [menuOpen]);
+
   return (
-    <header className="fixed top-0 w-full z-50 bg-black/30 backdrop-blur-md">
-      <div className="max-w-8xl mx-auto px-6 md:px-12 lg:px-20 py-6 flex items-center justify-between">
+    <header className="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-md">
+      <div className="max-w-8xl mx-auto px-4 md:px-12 lg:px-20 py-5 flex items-center justify-between">
         <Link
           to="/"
-          className="text-3xl font-bold text-yellow-400 tracking-tight font-signature"
+          className="md:text-3xl font-bold text-yellow-400 tracking-tight font-signature"
         >
           Sachin Nimshan
         </Link>
 
-        {/* Desktop Menu */}
+        {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300">
           {navLinks.map((link) => (
-            <Link
+            <a
               key={link.name}
-              to={link.path}
+              href={link.path}
               className={`relative pb-1 transition duration-200 ${
                 isActive(link.path)
                   ? "text-yellow-400 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:bg-yellow-400"
@@ -40,11 +50,11 @@ const Header = () => {
               }`}
             >
               {link.name}
-            </Link>
+            </a>
           ))}
         </nav>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Toggle Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden text-gray-300 hover:text-yellow-400 transition"
@@ -58,22 +68,22 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile Nav Dropdown */}
+      {/* Mobile Nav Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-black/10 backdrop-blur-md px-6 py-4 space-y-4 text-gray-300 shadow-md">
+        <div className="md:hidden fixed top-[70px] left-0 w-full h-[calc(100vh-70px)] overflow-y-auto bg-black/90 px-6 py-8 space-y-6 text-gray-300 z-40">
           {navLinks.map((link) => (
-            <Link
+            <a
               key={link.name}
-              to={link.path}
+              href={link.path}
               onClick={() => setMenuOpen(false)}
-              className={`block text-base transition ${
+              className={`block text-sm font-medium transition ${
                 isActive(link.path)
                   ? "text-yellow-400 font-bold"
                   : "hover:text-yellow-400"
               }`}
             >
               {link.name}
-            </Link>
+            </a>
           ))}
         </div>
       )}
