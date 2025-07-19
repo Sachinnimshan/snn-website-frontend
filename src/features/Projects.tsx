@@ -2,8 +2,8 @@ import { useGetProjectsQuery } from "../api/projectsApiSlice";
 import PageWrapper from "../components/pagewrapper/PageWrapper";
 import SkeletonCard from "../components/skeloton/SkeletonCard";
 import type { Project } from "../types/projects";
-import { Github, Youtube, Globe } from "lucide-react";
 import { motion } from "framer-motion";
+import { FaGithub, FaYoutube, FaGlobe } from "react-icons/fa";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -63,7 +63,7 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-1 px-3 py-1 text-sm rounded-lg border border-green-300 text-green-500 dark:border-green-600 hover:bg-green-100 dark:hover:bg-gray-700 transition"
                 >
-                  <Github size={16} />
+                  <FaGithub size={16} />
                   GitHub
                 </a>
               )}
@@ -74,7 +74,7 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-1 px-3 py-1 text-sm rounded-lg border border-red-400 text-red-500 hover:bg-red-50 dark:hover:bg-gray-700 transition"
                 >
-                  <Youtube size={16} />
+                  <FaYoutube size={16} />
                   YouTube
                 </a>
               )}
@@ -85,7 +85,7 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-1 px-3 py-1 text-sm rounded-lg border border-blue-400 text-blue-500 hover:bg-blue-50 dark:hover:bg-gray-700 transition"
                 >
-                  <Globe size={16} />
+                  <FaGlobe size={16} />
                   Live
                 </a>
               )}
