@@ -1,6 +1,6 @@
 import { AlignJustify, X } from "lucide-react";
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const navLinks = [
   { name: "Home", path: "#home" },
@@ -30,12 +30,12 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-md">
       <div className="max-w-8xl mx-auto px-4 md:px-12 lg:px-20 py-5 flex items-center justify-between">
-        <Link
-          to="/"
+        <a
+          href="#home"
           className="md:text-3xl font-bold text-yellow-400 tracking-tight font-signature"
         >
           Sachin Nimshan
-        </Link>
+        </a>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300">
