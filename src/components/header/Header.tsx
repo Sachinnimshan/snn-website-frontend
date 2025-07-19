@@ -1,6 +1,7 @@
-import { AlignJustify, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { HiMenu } from "react-icons/hi";
+import { AiOutlineClose } from "react-icons/ai";
 
 const navLinks = [
   { name: "Home", path: "#home" },
@@ -61,9 +62,9 @@ const Header = () => {
           aria-label="Toggle menu"
         >
           {menuOpen ? (
-            <X className="h-6 w-6" />
+            <AiOutlineClose className="h-6 w-6" />
           ) : (
-            <AlignJustify className="h-6 w-6" />
+            <HiMenu className="h-6 w-6" />
           )}
         </button>
       </div>

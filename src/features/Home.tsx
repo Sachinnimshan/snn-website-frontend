@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Download } from "lucide-react";
+import { FaDownload } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -45,7 +45,7 @@ export default function Home() {
               download
               className="border border-yellow-400 text-yellow-400 px-4 py-2.5 rounded-lg hover:bg-yellow-400 hover:text-black transition flex items-center gap-2"
             >
-              <Download className="h-5 w-5" />
+              <FaDownload className="h-5 w-5" />
               Download Resume
             </a>
           </div>
