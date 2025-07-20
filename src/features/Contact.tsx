@@ -39,15 +39,10 @@ const Contact = () => {
     }
   };
   return (
-    <PageWrapper>
-      {/* Title */}
-      <h1 className="text-3xl font-bold text-yellow-400 text-center uppercase mb-2">
-        Contact Me
-      </h1>
-      <p className="text-gray-300 text-center mb-12">
-        Feel free to reach out for collaborations or just a friendly hello 👋
-      </p>
-
+    <PageWrapper
+      title="Contact Me"
+      description="Feel free to reach out for collaborations or just a friendly hello 👋"
+    >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Contact Info */}
         <div className="space-y-6">
@@ -66,7 +61,7 @@ const Contact = () => {
             <span className="text-gray-200 text-sm">Walasmulla, Sri Lanka</span>
           </div>
 
-          <div className="flex gap-6 mt-6 flex justify-center">
+          <div className="flex gap-6 mt-6  justify-center">
             <a
               href="https://linkedin.com/in/sachin-nimshan"
               target="_blank"

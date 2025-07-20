@@ -12,7 +12,7 @@ export default function PageWrapper({
   children,
 }: PageWrapperProps) {
   return (
-    <div className="w-full pt-24 pb-12 px-4 sm:px-6 bg-black/30">
+    <div className="w-full pt-24 pb-12 px-4 sm:px-6 min-h-screen bg-[#131921]/85">
       <div className="max-w-7xl mx-auto">
         {title && (
           <h1 className="text-xl sm:text-2xl font-bold mb-2 text-yellow-400 text-center uppercase">
@@ -24,7 +24,7 @@ export default function PageWrapper({
             {description}
           </p>
         )}
-        <div>{children}</div>
+        <div className="z-500">{children}</div>
       </div>
     </div>
   );

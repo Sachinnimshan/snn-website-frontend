@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { HiMenu } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 
 const navLinks = [
-  { name: "Home", path: "#home" },
-  { name: "About", path: "#about" },
-  { name: "Projects", path: "#projects" },
-  { name: "Experience", path: "#experience" },
-  { name: "Skills", path: "#skills" },
-  { name: "Academic", path: "#academic" },
-  { name: "Certifications", path: "#certifications" },
-  { name: "Contact", path: "#contact" },
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" },
+  { name: "Projects", path: "/projects" },
+  { name: "Experience", path: "/experience" },
+  { name: "Skills", path: "/skills" },
+  { name: "Academic", path: "/academic" },
+  { name: "Certifications", path: "/certifications" },
+  { name: "Contact", path: "/contact" },
 ];
 
 const Header = () => {
@@ -31,19 +31,19 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-md">
       <div className="max-w-8xl mx-auto px-4 md:px-12 lg:px-20 py-5 flex items-center justify-between">
-        <a
-          href="#home"
+        <Link
+          to="/"
           className="text-2xl md:text-3xl font-bold text-yellow-400 tracking-tight font-signature"
         >
           Sachin Nimshan
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
-              href={link.path}
+              to={link.path}
               className={`relative pb-1 transition duration-200 ${
                 isActive(link.path)
                   ? "text-yellow-400 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:bg-yellow-400"
@@ -51,7 +51,7 @@ const Header = () => {
               }`}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -73,9 +73,9 @@ const Header = () => {
       {menuOpen && (
         <div className="md:hidden fixed top-[70px] left-0 w-full h-[calc(100vh-70px)] overflow-y-auto bg-black/90 px-6 py-8 space-y-6 text-gray-300 z-40">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
-              href={link.path}
+              to={link.path}
               onClick={() => setMenuOpen(false)}
               className={`block text-sm font-medium transition ${
                 isActive(link.path)
@@ -84,7 +84,7 @@ const Header = () => {
               }`}
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </div>
       )}

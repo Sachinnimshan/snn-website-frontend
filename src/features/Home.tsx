@@ -1,9 +1,10 @@
 import { FaDownload } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <div className="relative text-white min-h-screen flex items-center justify-center px-4 bg-black/10">
+    <div className="relative text-white min-h-screen flex items-center justify-center px-4">
       <motion.div
         className="max-w-3xl w-full bg-black/30 backdrop-blur-md rounded-xl p-6 md:p-8 shadow-lg z-10"
         initial={{ opacity: 0 }}
@@ -19,7 +20,7 @@ export default function Home() {
           <p className="text-yellow-400 font-semibold text-sm tracking-wide uppercase mb-2">
             Hello, I'm
           </p>
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-white">
+          <h1 className="text-3xl md:text-5xl font-bold leading-tight text-gray-100">
             Sachin Nimshan
           </h1>
           <h2 className="text-2xl md:text-2xl font-medium text-gray-300 mt-2">
@@ -33,12 +34,12 @@ export default function Home() {
           </p>
 
           <div className="mt-6 flex justify-center gap-4 flex-wrap">
-            <a
-              href="#projects"
+            <Link
+              to="/projects"
               className="bg-yellow-400 text-black font-semibold px-5 py-2.5 rounded-lg shadow hover:bg-yellow-300 transition"
             >
               View Projects
-            </a>
+            </Link>
             <a
               href="/Sachin_Resume.pdf"
               download

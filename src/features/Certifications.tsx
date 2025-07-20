@@ -1,31 +1,43 @@
-import { FaCertificate } from "react-icons/fa";
+import { FaCertificate, FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import PageWrapper from "../components/pagewrapper/PageWrapper";
 
 const certifications = [
   {
     id: 1,
-    title: "Frontend Development with React",
+    title: "React Basics",
     issuer: "Coursera / Meta",
     date: "Jan 2024",
     description:
-      "Covered React fundamentals, hooks, routing, state management, and performance optimization techniques.",
+      "Mastered the essentials of React—including components, props, state, events, JSX, and hooks. Built dynamic user interfaces using declarative programming patterns, learned about component composition, and gained an understanding of React's rendering lifecycle.",
+    link: "https://www.coursera.org/account/accomplishments/certificate/UCNP272ACFPD",
   },
   {
     id: 2,
-    title: "Full Stack Developer Program",
-    issuer: "freeCodeCamp",
-    date: "Aug 2023",
+    title: "Interactivity with JavaScript",
+    issuer: "Coursera / University of Michigan",
+    date: "June 2024",
     description:
-      "Learned MERN stack development, REST APIs, authentication, and deployment strategies.",
+      "Focused on using modern JavaScript to add interactivity to web pages. Practiced manipulating the DOM, handling user events, managing form validation, working with functions, arrays, objects, and designing real-time, responsive experiences on the web.",
+    link: "https://www.coursera.org/account/accomplishments/certificate/4ZL575CQZZR4",
   },
   {
     id: 3,
-    title: "Responsive Web Design",
-    issuer: "Udemy",
-    date: "Mar 2022",
+    title: "React Design Patterns",
+    issuer: "Linkedin Learning",
+    date: "June 2023",
     description:
-      "Gained hands-on experience building mobile-first responsive layouts using HTML, CSS, and Flexbox/Grid.",
+      "Explored advanced React concepts and best practices, including common patterns such as container/presentation separation, higher order components, render props, compound components, and hooks. Improved code maintainability and scalability in React applications through effective design strategies.",
+    link: "https://www.linkedin.com/learning/certificates/648fe14a59bf23f4bf6fab6db451c49568bf834dd6072f6f3c3cbdf526f3e62f",
+  },
+  {
+    id: 4,
+    title: "Fundamentals of Digital Marketing",
+    issuer: "Google",
+    date: "January 2022",
+    description:
+      "Completed a comprehensive training in digital marketing, covering SEO, search and display ads, email marketing, analytics, social media, mobile marketing, content strategy, and building effective digital presence for brands and businesses.",
+    link: "https://www.linkedin.com/in/sachin-nimshan/details/certifications/1714966899279/single-media-viewer/?profileId=ACoAACRIRHcBHppWnU3qDTngRkV8RfX1HmPSe2k",
   },
 ];
 
@@ -33,30 +45,44 @@ const Certifications = () => {
   return (
     <PageWrapper
       title="Certifications"
-      description="Explore my certifications in web development and design."
+      description="Explore my certifications in web development and digital marketing."
     >
-      <div className="relative border-l border-yellow-500 pl-6 space-y-12">
-        {certifications.map((cert) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {certifications.map((cert, idx) => (
           <motion.div
             key={cert.id}
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4, delay: cert.id * 0.15 }}
-            className="relative"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: idx * 0.15 }}
+            className="bg-gray-800/70 border border-gray-700 rounded-xl shadow-lg hover:shadow-yellow-400/30 transition duration-300 p-6 flex flex-col gap-4 relative"
           >
-            {/* Icon */}
-            <span className="absolute -left-[22px] top-1 bg-yellow-500 p-2 rounded-full shadow-lg">
-              <FaCertificate className="text-white w-5 h-5" />
+            {/* Icon - Top Right Corner */}
+            <span className="absolute right-5 -top-6 bg-yellow-500 p-3 rounded-full shadow-lg flex justify-center items-center border-4 border-[#131921]">
+              <FaCertificate className="text-white w-6 h-6" />
             </span>
-
-            {/* Card Content */}
-            <div className="bg-gray-800/70 border border-gray-700 rounded-lg p-6 shadow-lg hover:shadow-yellow-400/40 transition duration-300">
-              <h2 className="text-xl font-semibold text-yellow-400">
+            <div className="mt-3">
+              <h2 className="text-lg font-semibold text-yellow-400 mb-1">
                 {cert.title}
               </h2>
               <p className="text-sm text-gray-400">{cert.issuer}</p>
               <p className="text-xs text-gray-500 mb-2">{cert.date}</p>
-              <p className="text-gray-300 text-sm">{cert.description}</p>
+              <p className="text-gray-300 text-sm mb-4">{cert.description}</p>
+              {cert.link ? (
+                <a
+                  href={cert.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-yellow-500 hover:bg-yellow-400 text-[#131921] font-semibold rounded-lg transition shadow focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                >
+                  View Certificate
+                  <FaExternalLinkAlt className="w-3.5 h-3.5" />
+                </a>
+              ) : (
+                <span className="inline-block text-xs text-gray-400 italic mt-2">
+                  Certificate unavailable
+                </span>
+              )}
             </div>
           </motion.div>
         ))}
