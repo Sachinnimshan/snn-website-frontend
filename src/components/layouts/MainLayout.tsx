@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaFacebook, FaYoutube } from "react-icons/fa";
 import ScrollToTop from "./ScrollToTop";
 
 import Home from "../../features/Home";
@@ -10,6 +10,7 @@ import Projects from "../../features/Projects";
 import Skills from "../../features/Skills";
 import Contact from "../../features/Contact";
 import Experience from "../../features/Experience";
+import Academic from "../../features/Academic";
 
 declare global {
   interface Window {
@@ -48,10 +49,29 @@ const MainLayout = () => {
     };
   }, [vantaEffect]);
 
+  const socialMediaLinks = [
+    {
+      icon: <FaGithub className="w-6 h-6" />,
+      url: "https://github.com/your-username",
+    },
+    {
+      icon: <FaLinkedin className="w-6 h-6" />,
+      url: "https://www.linkedin.com/in/sachin-nimshan/",
+    },
+    {
+      icon: <FaFacebook className="w-6 h-6" />,
+      url: "https://www.facebook.com/sachin.nimshan",
+    },
+    {
+      icon: <FaYoutube className="w-6 h-6" />,
+      url: "https://www.youtube.com/@sachinnimshan/featured",
+    },
+  ];
+
   return (
     <div
       ref={vantaRef}
-      className="min-h-screen flex flex-col text-white relative"
+      className="min-h-screen flex flex-col text-white relative overflow-hidden"
     >
       <ScrollToTop />
       <Header />
@@ -75,27 +95,23 @@ const MainLayout = () => {
         <section id="contact">
           <Contact />
         </section>
+        <section id="academic">
+          <Academic />
+        </section>
 
         {/* Fixed Side Icons */}
-        <div className="hidden md:flex fixed right-4 top-1/3 z-50 flex-col items-center gap-4 text-yellow-400 bg-black/10 backdrop-blur-md p-5 border border-yellow-400 rounded-lg shadow-lg mr-2">
-          <a
-            href="https://github.com/your-username"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-yellow-300 transition border border-yellow-400 p-2 rounded-full hover:bg-yellow-400 hover:text-white"
-            aria-label="GitHub"
-          >
-            <FaGithub className="w-6 h-6" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/sachin-nimshan/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-yellow-300 transition border border-yellow-400 p-2 rounded-full hover:bg-yellow-400 hover:text-white"
-            aria-label="LinkedIn"
-          >
-            <FaLinkedin className="w-6 h-6" />
-          </a>
+        <div className="hidden md:flex fixed right-4 top-1/3 z-50 flex-col items-center gap-4 text-yellow-400 bg-black/10 backdrop-blur-md p-3 border border-yellow-400 rounded-lg shadow-lg mr-2">
+          {socialMediaLinks.map((link, index) => (
+            <a
+              key={index}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-yellow-300 transition border-2 border-yellow-400 p-2 rounded-full hover:bg-yellow-400 hover:text-white"
+            >
+              {link.icon}
+            </a>
+          ))}
         </div>
       </main>
 

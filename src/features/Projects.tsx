@@ -1,4 +1,4 @@
-import { useGetProjectsQuery } from "../api/projectsApiSlice";
+import { useGetProjectListQuery } from "../api/webApiSlice";
 import PageWrapper from "../components/pagewrapper/PageWrapper";
 import SkeletonCard from "../components/skeloton/SkeletonCard";
 import type { Project } from "../types/projects";
@@ -15,7 +15,7 @@ const cardVariants = {
 };
 
 export default function Projects() {
-  const { data: projects, isLoading } = useGetProjectsQuery(undefined);
+  const { data: projects, isLoading } = useGetProjectListQuery(undefined);
 
   if (isLoading)
     return (
@@ -34,7 +34,7 @@ export default function Projects() {
         {projects?.map((project: Project, i: number) => (
           <motion.div
             key={project._id}
-            className="bg-[#131921]/90 shadow-md rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col border border-gray-400 hover:border-yellow-400 border-4"
+            className="bg-[#131921]/90 shadow-md rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col border border-gray-800 hover:border-yellow-400 border-4 hover:bg-yellow-400/10"
             custom={i}
             initial="hidden"
             animate="visible"
@@ -51,7 +51,7 @@ export default function Projects() {
               <h2 className="text-xl font-semibold text-gray-300 dark:text-white mb-2">
                 {project.title}
               </h2>
-              <p className="text-gray-400 dark:text-gray-300 text-sm">
+              <p className="text-gray-300 dark:text-gray-300 text-sm">
                 {project.description}
               </p>
             </div>

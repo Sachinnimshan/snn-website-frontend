@@ -29,7 +29,7 @@ const Header = () => {
   }, [menuOpen]);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-md">
+    <header className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-md">
       <div className="max-w-8xl mx-auto px-4 md:px-12 lg:px-20 py-5 flex items-center justify-between">
         <a
           href="#home"

@@ -1,12 +1,11 @@
-import { Link } from "react-router-dom";
 import { FaDownload } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="relative text-white min-h-screen flex items-center justify-center px-4 bg-black/40">
+    <div className="relative text-white min-h-screen flex items-center justify-center px-4 bg-black/10">
       <motion.div
-        className="max-w-3xl w-full bg-black/10 backdrop-blur-md rounded-xl p-6 md:p-8 shadow-lg z-10"
+        className="max-w-3xl w-full bg-black/30 backdrop-blur-md rounded-xl p-6 md:p-8 shadow-lg z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -34,12 +33,12 @@ export default function Home() {
           </p>
 
           <div className="mt-6 flex justify-center gap-4 flex-wrap">
-            <Link
-              to="/projects"
+            <a
+              href="#projects"
               className="bg-yellow-400 text-black font-semibold px-5 py-2.5 rounded-lg shadow hover:bg-yellow-300 transition"
             >
               View Projects
-            </Link>
+            </a>
             <a
               href="/Sachin_Resume.pdf"
               download
