@@ -5,6 +5,13 @@ import { HTTP_VERBS } from '../utils/httpVerbs';
 import type { Experience } from '../types/experience';
 import type { Education } from '../types/education';
 
+
+export interface ContactPayload {
+    name: string;
+    email: string;
+    message: string;
+}
+
 export const webApiSlice = createApi({
     reducerPath: 'webApiSlice',
     baseQuery: fetchBaseQuery({ baseUrl: baseURL }),
@@ -27,7 +34,14 @@ export const webApiSlice = createApi({
                 method: HTTP_VERBS.GET,
             }),
         }),
+        postContact: builder.mutation<void, ContactPayload>({
+            query: (payload) => ({
+                url: '/contact',
+                method: HTTP_VERBS.POST,
+                body: payload,
+            }),
+        }),
     }),
 });
 
-export const { useGetProjectListQuery, useGetExperienceListQuery, useGetAcademicListQuery } = webApiSlice;
+export const { useGetProjectListQuery, useGetExperienceListQuery, useGetAcademicListQuery, usePostContactMutation } = webApiSlice;

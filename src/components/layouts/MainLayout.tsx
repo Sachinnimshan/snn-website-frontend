@@ -20,6 +20,25 @@ declare global {
   }
 }
 
+const socialMediaLinks = [
+  {
+    icon: <FaGithub className="w-6 h-6" />,
+    url: "https://github.com/your-username",
+  },
+  {
+    icon: <FaLinkedin className="w-6 h-6" />,
+    url: "https://www.linkedin.com/in/sachin-nimshan/",
+  },
+  {
+    icon: <FaFacebook className="w-6 h-6" />,
+    url: "https://www.facebook.com/sachin.nimshan",
+  },
+  {
+    icon: <FaYoutube className="w-6 h-6" />,
+    url: "https://www.youtube.com/@sachinnimshan/featured",
+  },
+];
+
 const MainLayout = () => {
   const vantaRef = useRef(null);
   const [vantaEffect, setVantaEffect] = useState<{
@@ -40,6 +59,9 @@ const MainLayout = () => {
           scaleMobile: 1.0,
           color: 0xfacc15,
           backgroundColor: 0x131921,
+          points: 10, // reduce points (default is 20+)
+          maxDistance: 15, // reduce max connection distance
+          spacing: 20, // increase spacing between points
         })
       );
     }
@@ -48,25 +70,6 @@ const MainLayout = () => {
       if (vantaEffect) vantaEffect.destroy();
     };
   }, [vantaEffect]);
-
-  const socialMediaLinks = [
-    {
-      icon: <FaGithub className="w-6 h-6" />,
-      url: "https://github.com/your-username",
-    },
-    {
-      icon: <FaLinkedin className="w-6 h-6" />,
-      url: "https://www.linkedin.com/in/sachin-nimshan/",
-    },
-    {
-      icon: <FaFacebook className="w-6 h-6" />,
-      url: "https://www.facebook.com/sachin.nimshan",
-    },
-    {
-      icon: <FaYoutube className="w-6 h-6" />,
-      url: "https://www.youtube.com/@sachinnimshan/featured",
-    },
-  ];
 
   return (
     <div
@@ -83,22 +86,24 @@ const MainLayout = () => {
         <section id="about">
           <About />
         </section>
-        <section id="experience">
-          <Experience />
-        </section>
         <section id="projects">
           <Projects />
+        </section>
+        <section id="experience">
+          <Experience />
         </section>
         <section id="skills">
           <Skills />
         </section>
-        <section id="contact">
-          <Contact />
-        </section>
         <section id="academic">
           <Academic />
         </section>
-
+        {/* <section id="certifications">
+          <Certifications />
+        </section> */}
+        <section id="contact">
+          <Contact />
+        </section>
         {/* Fixed Side Icons */}
         <div className="hidden md:flex fixed right-4 top-1/3 z-50 flex-col items-center gap-4 text-yellow-400 bg-black/10 backdrop-blur-md p-3 border border-yellow-400 rounded-lg shadow-lg mr-2">
           {socialMediaLinks.map((link, index) => (

@@ -7,8 +7,8 @@ const navLinks = [
   { name: "Home", path: "#home" },
   { name: "About", path: "#about" },
   { name: "Projects", path: "#projects" },
-  { name: "Skills", path: "#skills" },
   { name: "Experience", path: "#experience" },
+  { name: "Skills", path: "#skills" },
   { name: "Academic", path: "#academic" },
   { name: "Certifications", path: "#certifications" },
   { name: "Contact", path: "#contact" },
@@ -33,7 +33,7 @@ const Header = () => {
       <div className="max-w-8xl mx-auto px-4 md:px-12 lg:px-20 py-5 flex items-center justify-between">
         <a
           href="#home"
-          className="md:text-3xl font-bold text-yellow-400 tracking-tight font-signature"
+          className="text-2xl md:text-3xl font-bold text-yellow-400 tracking-tight font-signature"
         >
           Sachin Nimshan
         </a>
