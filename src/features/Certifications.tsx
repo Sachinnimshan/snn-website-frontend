@@ -55,7 +55,7 @@ const Certifications = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: idx * 0.15 }}
-            className="bg-gray-800/70 border border-gray-700 rounded-xl shadow-lg hover:shadow-yellow-400/30 transition duration-300 p-6 flex flex-col gap-4 relative"
+            className="cursor-pointer bg-gray-800/70 border border-gray-700 rounded-xl shadow-lg  transition duration-300 p-6 flex flex-col gap-4 relative hover:bg-yellow-400/10"
           >
             {/* Icon - Top Right Corner */}
             <span className="absolute right-5 -top-6 bg-yellow-500 p-3 rounded-full shadow-lg flex justify-center items-center border-4 border-[#131921]">

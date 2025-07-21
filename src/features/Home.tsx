@@ -2,8 +2,6 @@ import { FaDownload } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-// ...imports
-
 export default function Home() {
   return (
     <div className="relative text-white min-h-screen flex items-center justify-center px-4 sm:px-4 py-8">
@@ -19,16 +17,16 @@ export default function Home() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          <p className="text-yellow-400 font-semibold text-xs sm:text-sm tracking-wide uppercase mb-1 sm:mb-2">
+          <p className="text-yellow-400 font-semibold text-[10px] sm:text-xs md:text-sm tracking-wide uppercase mb-1 sm:mb-2">
             Hello, I'm
           </p>
-          <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight text-gray-100">
+          <h1 className="text-xl sm:text-2xl md:text-5xl font-bold leading-tight text-gray-100">
             Sachin Nimshan
           </h1>
-          <h2 className="text-lg sm:text-2xl md:text-2xl font-medium text-gray-300 mt-1 sm:mt-2">
+          <h2 className="text-base sm:text-xl md:text-2xl font-medium text-gray-300 mt-1 sm:mt-2">
             Frontend Engineer ( React | TypeScript | UI/UX )
           </h2>
-          <p className="mt-3 sm:mt-4 text-gray-300 text-base sm:text-lg leading-relaxed max-w-xl sm:max-w-2xl">
+          <p className="mt-3 sm:mt-4 text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-xl sm:max-w-2xl">
             Passionate software engineer building modern, intuitive, and
             scalable web apps. Expert in React, TypeScript, and clean UI
             development. Dedicated to delivering smooth, high-performance user

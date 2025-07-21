@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer
       aria-label="Footer"
-      className="bg-black/30 backdrop-blur-md text-yellow-400 text-center py-4 select-none text-sm font-small"
+      className="bg-black/30 backdrop-blur-md text-yellow-400 text-center py-4 select-none text-xs font-small"
     >
       <div className="flex items-center justify-center gap-2">
         <AiOutlineCopyright size={16} />

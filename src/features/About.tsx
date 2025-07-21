@@ -3,7 +3,7 @@ import PageWrapper from "../components/pagewrapper/PageWrapper";
 export default function About() {
   return (
     <PageWrapper title="About Me" description="Get to know me better">
-      <div className="mx-auto text-gray-300 dark:text-gray-200 space-y-6 leading-relaxed text-base text-justify">
+      <div className="mx-auto text-gray-300 dark:text-gray-200 space-y-6 leading-relaxed text-sm sm:text-base md:text-base text-justify">
         <p>
           I am a{" "}
           <span className="font-semibold text-yellow-400">
