@@ -72,14 +72,14 @@ const MainLayout = () => {
         <Outlet />
       </main>
 
-      <div className="hidden md:flex fixed right-4 top-1/3 z-50 flex-col items-center gap-4 text-yellow-400 bg-black/10 backdrop-blur-md p-3 border border-yellow-400 rounded-lg shadow-lg mr-2">
+      <div className="hidden md:flex fixed right-4 top-1/3 z-50 flex-col items-center gap-4 text-yellow-400 bg-black/10 backdrop-blur-md p-3  shadow-lg mr-2">
         {socialMediaLinks.map((link, index) => (
           <a
             key={index}
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-yellow-300 transition border-2 border-yellow-400 p-2 rounded-full hover:bg-yellow-400 hover:text-white"
+            className="hover:text-yellow-300 transition border-2 border-yellow-400 p-2 rounded-full hover:bg-yellow-800"
           >
             {link.icon}
           </a>
