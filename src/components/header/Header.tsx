@@ -2,17 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { HiMenu } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
-
-const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Projects", path: "/projects" },
-  { name: "Experience", path: "/experience" },
-  { name: "Skills", path: "/skills" },
-  { name: "Academic", path: "/academic" },
-  { name: "Certifications", path: "/certifications" },
-  { name: "Contact", path: "/contact" },
-];
+import { navLinks } from "./navLinks";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
