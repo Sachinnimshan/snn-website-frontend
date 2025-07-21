@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <div className="relative text-white min-h-screen flex items-center justify-center px-2 sm:px-4 py-8">
+    <div className="relative text-white min-h-screen flex items-center justify-center px-4 sm:px-4 py-8">
       <motion.div
         className="w-full max-w-3xl bg-black/30 backdrop-blur-md rounded-lg p-4 sm:p-6 md:p-8 shadow-lg z-10"
         initial={{ opacity: 0 }}
