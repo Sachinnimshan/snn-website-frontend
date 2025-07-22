@@ -55,14 +55,14 @@ const Certifications = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: idx * 0.15 }}
-            className="cursor-pointer bg-gray-800/70 border border-gray-700 rounded-xl shadow-lg  transition duration-300 p-6 flex flex-col gap-4 relative hover:bg-yellow-400/10"
+            className="cursor-pointer bg-gray-800/70 border border-gray-700 rounded-xl shadow-lg  transition duration-300 p-6 flex flex-col gap-4 relative hover:bg-yellow-500/10"
           >
             {/* Icon - Top Right Corner */}
             <span className="absolute right-5 -top-6 bg-yellow-500 p-3 rounded-full shadow-lg flex justify-center items-center border-4 border-[#131921]">
               <FaCertificate className="text-white w-6 h-6" />
             </span>
             <div className="mt-3">
-              <h2 className="text-lg font-semibold text-yellow-400 mb-1">
+              <h2 className="text-lg font-semibold text-yellow-500 mb-1">
                 {cert.title}
               </h2>
               <p className="text-sm text-gray-400">{cert.issuer}</p>
@@ -73,7 +73,7 @@ const Certifications = () => {
                   href={cert.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-yellow-500 hover:bg-yellow-400 text-[#131921] font-semibold rounded-lg transition shadow focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  className="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-yellow-500 hover:bg-yellow-500 text-primaryDark font-semibold rounded-lg transition shadow focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 >
                   View Certificate
                   <FaExternalLinkAlt className="w-3.5 h-3.5" />

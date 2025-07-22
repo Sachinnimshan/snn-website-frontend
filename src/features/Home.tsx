@@ -17,7 +17,7 @@ export default function Home() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
         >
-          <p className="text-yellow-400 font-semibold text-[10px] sm:text-xs md:text-sm tracking-wide uppercase mb-1 sm:mb-2">
+          <p className="text-yellow-500 font-semibold text-[10px] sm:text-xs md:text-sm tracking-wide uppercase mb-1 sm:mb-2">
             Hello, I'm
           </p>
           <h1 className="text-xl sm:text-2xl md:text-5xl font-bold leading-tight text-gray-100">
@@ -36,14 +36,14 @@ export default function Home() {
           <div className="mt-5 sm:mt-6 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 w-full">
             <Link
               to="/projects"
-              className="bg-yellow-400 text-black font-semibold px-4 py-2.5 rounded-lg shadow hover:bg-yellow-300 transition w-full sm:w-auto"
+              className="bg-yellow-500 text-black font-semibold px-4 py-2.5 rounded-lg shadow hover:bg-yellow-400 transition w-full sm:w-auto"
             >
               View Projects
             </Link>
             <a
               href="/Sachin_Resume.pdf"
               download
-              className="border border-yellow-400 text-yellow-400 px-4 py-2.5 rounded-lg hover:bg-yellow-400 hover:text-black transition flex items-center justify-center gap-2 w-full sm:w-auto"
+              className="border border-yellow-500 text-yellow-500 px-4 py-2.5 rounded-lg hover:bg-yellow-400 hover:text-black transition flex items-center justify-center gap-2 w-full sm:w-auto"
             >
               <FaDownload className="h-5 w-5" />
               Download Resume

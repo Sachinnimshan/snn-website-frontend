@@ -23,7 +23,7 @@ const Header = () => {
       <div className="max-w-8xl mx-auto px-4 md:px-12 lg:px-20 py-5 flex items-center justify-between">
         <Link
           to="/"
-          className="text-2xl md:text-3xl font-bold text-yellow-400 tracking-tight font-signature"
+          className="text-2xl md:text-3xl font-bold text-yellow-500 tracking-tight font-signature"
         >
           Sachin Nimshan
         </Link>
@@ -36,8 +36,8 @@ const Header = () => {
               to={link.path}
               className={`relative pb-1 transition duration-200 ${
                 isActive(link.path)
-                  ? "text-yellow-400 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:bg-yellow-400"
-                  : "hover:text-yellow-400"
+                  ? "text-yellow-500 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:bg-yellow-500"
+                  : "hover:text-yellow-500"
               }`}
             >
               {link.name}
@@ -48,7 +48,7 @@ const Header = () => {
         {/* Mobile Toggle Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-gray-300 hover:text-yellow-400 transition"
+          className="md:hidden text-gray-300 hover:text-yellow-500 transition"
           aria-label="Toggle menu"
         >
           {menuOpen ? (
@@ -69,8 +69,8 @@ const Header = () => {
               onClick={() => setMenuOpen(false)}
               className={`block text-sm font-medium transition ${
                 isActive(link.path)
-                  ? "text-yellow-400 font-bold"
-                  : "hover:text-yellow-400"
+                  ? "text-yellow-500 font-bold"
+                  : "hover:text-yellow-500"
               }`}
             >
               {link.name}

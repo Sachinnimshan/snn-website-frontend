@@ -15,7 +15,7 @@ export default function PageWrapper({
     <div className="w-full pt-24 pb-12 px-4 sm:px-6 min-h-screen bg-primaryDark/85">
       <div className="max-w-7xl mx-auto">
         {title && (
-          <h1 className="text-xl sm:text-2xl font-bold mb-2 text-yellow-400 text-center uppercase">
+          <h1 className="text-xl sm:text-2xl font-bold mb-2 text-yellow-500 text-center uppercase">
             {title}
           </h1>
         )}
