@@ -11,7 +11,7 @@ const Skills = () => (
         <div
           key={name}
           className="
-            bg-[#131921]
+            bg-primaryDark/70
             flex items-center gap-2 sm:gap-3
             border-2 p-3 sm:p-4 md:p-5
             rounded-xl shadow border-gray-700
