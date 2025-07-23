@@ -42,12 +42,15 @@ const Experience = () => {
                       })
                     : "Present"
                 }`}
-                iconStyle={{ background: "#facc15", color: "#1f2937" }} // yellow-400
+                iconStyle={{
+                  background: item.current ? "#93d600" : "#facc15",
+                  color: "#1f2937",
+                }} // yellow-400
                 icon={<FaBriefcase />}
                 contentStyle={{
                   background: "#f3f4f6",
                   color: "#1f2937", // gray-800
-                  borderTop: item.current ? "0.5rem solid #facc15" : "none",
+                  borderTop: item.current ? "0.75rem solid #93d600" : "none",
                 }}
                 contentArrowStyle={{ borderRight: "7px solid #e5e7eb" }} // gray-200
                 dateClassName="text-gray-100 dark:text-gray-200"
