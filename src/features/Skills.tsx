@@ -11,7 +11,7 @@ const Skills = () => (
         <div
           key={name}
           className="
-            bg-primaryDark/70
+            bg-gray-800/70
             flex items-center gap-2 sm:gap-3
             border-2 p-3 sm:p-4 md:p-5
             rounded-xl shadow border-gray-700
@@ -26,7 +26,7 @@ const Skills = () => (
             size={22}
             style={{ minWidth: 22, minHeight: 22 }}
           />
-          <span className="text-gray-400 text-xs sm:text-sm md:text-lg font-medium">
+          <span className="text-gray-300 text-xs sm:text-sm md:text-lg font-medium">
             {name}
           </span>
         </div>
