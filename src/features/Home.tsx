@@ -23,7 +23,7 @@ export default function Home() {
           <h1 className="text-xl sm:text-2xl md:text-5xl font-bold leading-tight text-gray-100">
             Sachin Nimshan
           </h1>
-          <h2 className="text-lg sm:text-2xl md:text-3xl font-semibold mt-2 sm:mt-3 bg-gradient-to-r from-yellow-300 via-yellow-200 to-yellow-100 bg-clip-text text-transparent drop-shadow-md">
+          <h2 className="text-lg sm:text-2xl md:text-3xl font-semibold mt-2 sm:mt-3 bg-gradient-to-r from-yellow-600 via-yellow-400 to-yellow-200 bg-clip-text text-transparent drop-shadow-md">
             Frontend Engineer ( React | TypeScript | UI/UX )
           </h2>
           <p className="mt-3 sm:mt-4 text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-xl sm:max-w-2xl">

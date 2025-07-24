@@ -26,7 +26,7 @@ const Skills = () => (
             size={22}
             style={{ minWidth: 22, minHeight: 22 }}
           />
-          <span className="text-gray-300 text-xs sm:text-sm md:text-lg font-medium">
+          <span className=" bg-gradient-to-b from-yellow-600 via-yellow-400 to-yellow-200 bg-clip-text text-transparent text-xs sm:text-sm md:text-lg font-medium">
             {name}
           </span>
         </div>

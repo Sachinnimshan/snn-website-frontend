@@ -31,7 +31,7 @@ const MainLayout = () => {
           minWidth: 200.0,
           scale: 1.0,
           scaleMobile: 1.0,
-          color: 0xCA8A04,
+          color: 0xca8a04,
           backgroundColor: 0x131921, //000000
         })
       );

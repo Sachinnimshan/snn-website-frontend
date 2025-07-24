@@ -23,7 +23,7 @@ const Header = () => {
       <div className="max-w-8xl mx-auto px-4 md:px-12 lg:px-20 py-5 flex items-center justify-between">
         <Link
           to="/"
-          className="text-2xl md:text-3xl font-bold text-yellow-500 tracking-tight font-signature"
+          className="text-2xl md:text-3xl font-bold bg-gradient-to-t from-yellow-600 via-yellow-400 to-yellow-200 bg-clip-text text-transparent  font-signature"
         >
           Sachin Nimshan
         </Link>
