@@ -12,7 +12,7 @@ export default function PageWrapper({
   children,
 }: PageWrapperProps) {
   return (
-    <div className="w-full pt-24 pb-12 px-4 sm:px-6 min-h-screen bg-primaryDark/85">
+    <div className="w-full pt-24 pb-12 px-4 sm:px-6 min-h-screen bg-primaryDark/75">
       <div className="max-w-7xl mx-auto">
         {title && (
           <h1 className="text-xl sm:text-2xl font-bold mb-2 text-yellow-500 text-center uppercase">

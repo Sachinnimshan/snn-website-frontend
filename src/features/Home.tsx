@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="relative text-white min-h-screen flex items-center justify-center px-4 sm:px-4 py-8">
       <motion.div
-        className="w-full max-w-3xl bg-black/30 backdrop-blur-md rounded-lg p-4 sm:p-6 md:p-8 shadow-lg z-10"
+        className="w-full max-w-3xl  backdrop-blur-md rounded-lg p-4 sm:p-6 md:p-8 shadow-lg z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
@@ -23,7 +23,7 @@ export default function Home() {
           <h1 className="text-xl sm:text-2xl md:text-5xl font-bold leading-tight text-gray-100">
             Sachin Nimshan
           </h1>
-          <h2 className="text-base sm:text-xl md:text-2xl font-medium text-gray-300 mt-1 sm:mt-2">
+          <h2 className="text-lg sm:text-2xl md:text-3xl font-semibold mt-2 sm:mt-3 bg-gradient-to-r from-yellow-300 via-yellow-200 to-yellow-100 bg-clip-text text-transparent drop-shadow-md">
             Frontend Engineer ( React | TypeScript | UI/UX )
           </h2>
           <p className="mt-3 sm:mt-4 text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed max-w-xl sm:max-w-2xl">
