@@ -7,6 +7,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import Loader from "../components/loader/Loader";
+import { THEME_COLORS } from "../utils/theme";
 
 const Experience = () => {
   const { data: experiences, isLoading } = useGetExperienceListQuery(undefined);
@@ -19,7 +20,7 @@ const Experience = () => {
       {isLoading ? (
         <Loader loading={isLoading} />
       ) : (
-        <VerticalTimeline lineColor="#d1d5db">
+        <VerticalTimeline lineColor={THEME_COLORS.PRIMARY_WHITE_COLOR}>
           {experiences
             ?.slice() // Create a shallow copy to avoid mutating the original data
             .sort(
@@ -43,23 +44,25 @@ const Experience = () => {
                     : "Present"
                 }`}
                 iconStyle={{
-                  background: item.current ? "#93d600" : "#facc15",
-                  color: "#1f2937",
+                  background: item.current ? "#93d600" : "#666666",
+                  color: "#ffffff",
                 }} // yellow-400
                 icon={<FaBriefcase />}
                 contentStyle={{
-                  background: "#f3f4f6",
+                  background: "#e3e6e6",
                   color: "#1f2937", // gray-800
                   borderTop: item.current ? "0.75rem solid #93d600" : "none",
                 }}
                 contentArrowStyle={{ borderRight: "7px solid #e5e7eb" }} // gray-200
                 dateClassName="text-gray-100 dark:text-gray-200"
               >
-                <h3 className="text-lg font-bold">{item.jobTitle}</h3>
-                <h4 className="text-md font-medium text-yellow-600">
+                <h3 className="text-lg font-bold text-primaryTextColor">
+                  {item.jobTitle}
+                </h3>
+                <h4 className="text-md font-semibold text-secondaryColor">
                   {item.companyName}
                 </h4>
-                <ul className="list-disc pl-4 text-sm mt-2 text-gray-600">
+                <ul className="list-disc pl-4 text-sm mt-2 text-gray-700">
                   {item.keyroles?.map(
                     (point: string, idx: number) =>
                       point && <li key={idx}>{point}</li>

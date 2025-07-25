@@ -19,25 +19,25 @@ const Header = () => {
   }, [menuOpen]);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-md">
+    <header className="fixed top-0 left-0 w-full z-50 bg-primaryWhiteColor shadow-xs">
       <div className="max-w-8xl mx-auto px-4 md:px-12 lg:px-20 py-5 flex items-center justify-between">
         <Link
           to="/"
-          className="text-2xl md:text-3xl font-bold bg-gradient-to-t from-yellow-600 via-yellow-400 to-yellow-200 bg-clip-text text-transparent  font-signature"
+          className="text-2xl md:text-3xl font-bold text-primaryTextColor font-signature"
         >
           Sachin Nimshan
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-gray-300">
+        <nav className="hidden md:flex items-center gap-6 text-sm font-bold text-gray-700 uppercase">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.path}
               className={`relative pb-1 transition duration-200 ${
                 isActive(link.path)
-                  ? "text-yellow-500 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:bg-yellow-500"
-                  : "hover:text-yellow-500"
+                  ? "text-secondaryColor after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-[3px] after:w-full after:bg-secondaryColor"
+                  : "hover:text-secondaryColor"
               }`}
             >
               {link.name}
@@ -48,7 +48,7 @@ const Header = () => {
         {/* Mobile Toggle Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-gray-300 hover:text-yellow-500 transition"
+          className="md:hidden text-gray-700 hover:text-secondaryColor transition"
           aria-label="Toggle menu"
         >
           {menuOpen ? (
@@ -61,16 +61,16 @@ const Header = () => {
 
       {/* Mobile Nav Menu */}
       {menuOpen && (
-        <div className="md:hidden fixed top-[70px] left-0 w-full h-[calc(100vh-70px)] overflow-y-auto bg-black/90 px-6 py-8 space-y-6 text-gray-300 z-40">
+        <div className="md:hidden fixed top-[70px] right-0 h-full max-w-xs overflow-y-auto bg-primaryWhiteColor px-6 py-8 space-y-6 text-primaryTextColor z-40 shadow-lg">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.path}
               onClick={() => setMenuOpen(false)}
-              className={`block text-sm font-medium transition ${
+              className={`block text-sm text-right font-semibold uppercase transition ${
                 isActive(link.path)
-                  ? "text-yellow-500 font-bold"
-                  : "hover:text-yellow-500"
+                  ? "text-secondaryColor font-bold"
+                  : "hover:text-secondaryColor"
               }`}
             >
               {link.name}

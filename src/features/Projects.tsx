@@ -22,11 +22,11 @@ export default function Projects() {
       {isLoading ? (
         <Loader loading={isLoading} />
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
           {projects?.map((project: Project, i: number) => (
             <motion.div
               key={project._id}
-              className="bg-gray-800/70 shadow-md rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col border border-gray-800 hover:border-yellow-500 border-4 hover:bg-yellow-500/10"
+              className="bg-mainBgColor border-primaryWhiteColor rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col border hover:shadow-md border-2"
               custom={i}
               initial="hidden"
               animate="visible"
@@ -40,10 +40,10 @@ export default function Projects() {
                 />
               )}
               <div className="p-4 flex-grow">
-                <h2 className="text-xl font-semibold text-gray-300 dark:text-white mb-2">
+                <h2 className="text-xl font-semibold text-primaryTextColor dark:text-white mb-2">
                   {project.title}
                 </h2>
-                <p className="text-gray-300 dark:text-gray-300 text-sm">
+                <p className="text-secondaryTextColor font-medium dark:text-gray-300 text-base">
                   {project.description}
                 </p>
               </div>
@@ -53,7 +53,7 @@ export default function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 px-3 py-1 text-sm rounded-lg border border-green-300 text-green-500 dark:border-green-600 hover:bg-green-100 dark:hover:bg-gray-700 transition"
+                    className="flex items-center gap-1 px-3 py-1 text-sm rounded-lg border-2 border-green-500 text-green-500 dark:border-green-600 hover:bg-green-100 dark:hover:bg-gray-700 transition"
                   >
                     <FaGithub size={16} />
                     GitHub
@@ -64,7 +64,7 @@ export default function Projects() {
                     href={project.youtube}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 px-3 py-1 text-sm rounded-lg border border-red-400 text-red-500 hover:bg-red-50 dark:hover:bg-gray-700 transition"
+                    className="flex items-center gap-1 px-3 py-1 text-sm rounded-lg border-2 border-red-400 text-red-500 hover:bg-red-50 dark:hover:bg-gray-700 transition"
                   >
                     <FaYoutube size={16} />
                     YouTube
@@ -75,7 +75,7 @@ export default function Projects() {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 px-3 py-1 text-sm rounded-lg border border-blue-400 text-blue-500 hover:bg-blue-50 dark:hover:bg-gray-700 transition"
+                    className="flex items-center gap-1 px-3 py-1 text-sm rounded-lg border-2 border-blue-400 text-blue-500 hover:bg-blue-50 dark:hover:bg-gray-700 transition"
                   >
                     <FaGlobe size={16} />
                     Live

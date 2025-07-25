@@ -6,27 +6,27 @@ const Skills = () => (
     title="Skills"
     description="My skills and technologies I work with"
   >
-    <div className="flex flex-wrap gap-4 sm:gap-5 md:gap-6 justify-center">
+    <div className="flex flex-wrap gap-4 sm:gap-5 md:gap-2 justify-center">
       {skills.map(({ name, icon: Icon }) => (
         <div
           key={name}
           className="
-            bg-gray-800/70
+            bg-mainBgColor
             flex items-center gap-2 sm:gap-3
             border-2 p-3 sm:p-4 md:p-5
-            rounded-xl shadow border-gray-700
-            hover:bg-yellow-400/10 hover:border-yellow-400
+            rounded-xl shadow border-primaryWhiteColor
+            hover:border-secondaryColor
             transition-colors cursor-pointer
             min-w-[130px] sm:min-w-[155px] md:min-w-[180px]
             justify-center
           "
         >
           <Icon
-            className="text-yellow-400"
+            className="text-primaryTextColor"
             size={22}
             style={{ minWidth: 22, minHeight: 22 }}
           />
-          <span className=" bg-gradient-to-b from-yellow-600 via-yellow-400 to-yellow-200 bg-clip-text text-transparent text-xs sm:text-sm md:text-lg font-medium">
+          <span className="text-primaryTextColor text-xs sm:text-sm md:text-lg font-medium">
             {name}
           </span>
         </div>

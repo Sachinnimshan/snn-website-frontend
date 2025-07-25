@@ -1,4 +1,4 @@
-import { FaCertificate, FaExternalLinkAlt } from "react-icons/fa";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import PageWrapper from "../components/pagewrapper/PageWrapper";
 
@@ -55,25 +55,27 @@ const Certifications = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: idx * 0.15 }}
-            className="cursor-pointer bg-gray-800/70 border border-gray-700 rounded-xl shadow-lg  transition duration-300 p-6 flex flex-col gap-4 relative hover:bg-yellow-500/10"
+            className="cursor-pointer bg-mainBgColor border border-primaryWhiteColor rounded-xl shadow-xs  transition duration-300 p-6 flex flex-col gap-4 relative"
           >
-            {/* Icon - Top Right Corner */}
-            <span className="absolute right-5 -top-6 bg-yellow-500 p-3 rounded-full shadow-lg flex justify-center items-center border-4 border-[#131921]">
-              <FaCertificate className="text-white w-6 h-6" />
-            </span>
             <div className="mt-3">
-              <h2 className="text-lg font-semibold text-yellow-500 mb-1">
+              <h2 className="text-lg font-semibold text-primaryTextColor mb-1">
                 {cert.title}
               </h2>
-              <p className="text-sm text-gray-400">{cert.issuer}</p>
-              <p className="text-xs text-gray-500 mb-2">{cert.date}</p>
-              <p className="text-gray-300 text-sm mb-4">{cert.description}</p>
+              <p className="text-sm font-medium text-primaryTextColor">
+                {cert.issuer}
+              </p>
+              <p className="text-sm text-secondaryTextColor mb-2">
+                {cert.date}
+              </p>
+              <p className="text-secondaryTextColor text-sm mb-4">
+                {cert.description}
+              </p>
               {cert.link ? (
                 <a
                   href={cert.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-yellow-500 hover:bg-yellow-500 text-primaryDark font-semibold rounded-lg transition shadow focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                  className="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-primaryGreenColor hover:bg-yellow-500 text-gray-700 font-semibold rounded-lg transition shadow focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 >
                   View Certificate
                   <FaExternalLinkAlt className="w-3.5 h-3.5" />

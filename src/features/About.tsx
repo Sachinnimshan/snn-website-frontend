@@ -3,10 +3,10 @@ import PageWrapper from "../components/pagewrapper/PageWrapper";
 export default function About() {
   return (
     <PageWrapper title="About Me" description="Get to know me better">
-      <div className="mx-auto text-gray-300 dark:text-gray-200 space-y-6 leading-relaxed text-sm sm:text-base md:text-base text-justify">
+      <div className="mx-auto text-secondaryTextColor dark:text-gray-200 space-y-6 leading-relaxed font-medium text-base sm:text-base md:text-base text-justify">
         <p>
           I am a{" "}
-          <span className="font-semibold text-yellow-400">
+          <span className="font-semibold text-secondaryColor">
             Software Engineer
           </span>{" "}
           deeply passionate about React development, frontend technologies, and
@@ -56,10 +56,10 @@ export default function About() {
 
         <p>
           Outside of tech, I enjoy{" "}
-          <span className="text-yellow-300">fish keeping</span>,{" "}
-          <span className="text-yellow-300">watching cricket</span>, and I'm
-          proudly a <span className="text-yellow-300">dog person</span>. I also
-          like working on personal side projects that fuse technology with
+          <span className="text-secondaryColor">fish keeping</span>,{" "}
+          <span className="text-secondaryColor">watching cricket</span>, and I'm
+          proudly a <span className="text-secondaryColor">dog person</span>. I
+          also like working on personal side projects that fuse technology with
           creativity.
         </p>
       </div>
