@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { HiMenu } from "react-icons/hi";
+import { HiMenuAlt3 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { navLinks } from "./navLinks";
 
@@ -54,7 +54,7 @@ const Header = () => {
           {menuOpen ? (
             <AiOutlineClose className="h-6 w-6" />
           ) : (
-            <HiMenu className="h-6 w-6" />
+            <HiMenuAlt3 className="h-6 w-6" />
           )}
         </button>
       </div>

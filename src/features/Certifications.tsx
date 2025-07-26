@@ -47,7 +47,7 @@ const Certifications = () => {
       title="Certifications"
       description="Explore my certifications in web development and digital marketing."
     >
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {certifications.map((cert, idx) => (
           <motion.div
             key={cert.id}

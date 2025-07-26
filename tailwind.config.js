@@ -1,7 +1,7 @@
 // tailwind.config.js
 /** @type {import("tailwindcss").Config} */
 const { fontFamily } = require("tailwindcss/defaultTheme");
-const { THEME_COLORS } = require("./src/utils/theme");
+const { APP_COLORS } = require("./src/utils/theme");
 
 export default {
   darkMode: ["class"],
@@ -23,15 +23,14 @@ export default {
           "linear-gradient(to right, rgba(245, 245, 245, 0.7), rgba(245, 245, 245, 0.7)), url('/assets/common-bg.svg')",
       },
       colors: {
-        mainBgColor: THEME_COLORS.MAIN_BG_COLOR,
-        primaryWhiteColor: THEME_COLORS.PRIMARY_WHITE_COLOR,
-        secondaryWhiteColor: THEME_COLORS.SECONDARY_WHITE_COLOR,
-        secondaryBgColor: THEME_COLORS.SECONDARY_BG_COLOR,
-        secondaryColor: THEME_COLORS.SECONDARY_COLOR,
-        primaryTextColor: THEME_COLORS.PRIMARY_TEXT_COLOR,
-        secondaryTextColor: THEME_COLORS.SECONDARY_TEXT_COLOR,
-        primaryGreenColor: THEME_COLORS.PRIMARY_GREEN_COLOR,
-        primaryYellowColor: THEME_COLORS.PRIMARY_YELLOW_COLOR,
+        mainBgColor: APP_COLORS.MAIN_BG_COLOR,
+        primaryWhiteColor: APP_COLORS.PRIMARY_WHITE_COLOR,
+        secondaryWhiteColor: APP_COLORS.SECONDARY_WHITE_COLOR,
+        secondaryBgColor: APP_COLORS.SECONDARY_BG_COLOR,
+        secondaryColor: APP_COLORS.SECONDARY_COLOR,
+        primaryTextColor: APP_COLORS.PRIMARY_TEXT_COLOR,
+        secondaryTextColor: APP_COLORS.SECONDARY_TEXT_COLOR,
+        primaryGreenColor: APP_COLORS.PRIMARY_GREEN_COLOR,
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

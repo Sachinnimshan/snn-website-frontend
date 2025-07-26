@@ -41,7 +41,7 @@ const Contact = () => {
   return (
     <PageWrapper
       title="Contact Me"
-      description="Feel free to reach out for collaborations or just a friendly hello 👋"
+      description="Feel free to reach out for collaborations or just a friendly hello"
       background="bg-triangle-bg bg-no-repeat bg-cover bg-center"
     >
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -140,7 +140,7 @@ const Contact = () => {
           </div>
           <button
             type="submit"
-            className="bg-secondaryColor hover:bg-yellow-500 text-primaryWhiteColor font-semibold py-2 px-6 rounded-md transition"
+            className="bg-secondaryColor text-primaryWhiteColor font-semibold py-2 px-6 rounded-md transition"
           >
             Send Message
           </button>

@@ -10,8 +10,8 @@ export default function About() {
             Software Engineer
           </span>{" "}
           deeply passionate about React development, frontend technologies, and
-          delivering clean, intuitive UI/UX experiences. I hold a First-Class
-          BSc (Hons) in Software Engineering from{" "}
+          delivering clean, intuitive UI/UX experiences. I hold a Second-Class
+          B.Sc (Hons) in Software Engineering from{" "}
           <span className="text-blue-400">Cardiff Metropolitan University</span>
           .
         </p>
@@ -56,9 +56,12 @@ export default function About() {
 
         <p>
           Outside of tech, I enjoy{" "}
-          <span className="text-secondaryColor">fish keeping</span>,{" "}
-          <span className="text-secondaryColor">watching cricket</span>, and I'm
-          proudly a <span className="text-secondaryColor">dog person</span>. I
+          <span className="text-secondaryColor font-bold">fish keeping</span>,{" "}
+          <span className="text-secondaryColor font-bold">
+            watching cricket
+          </span>
+          , and I'm proudly a{" "}
+          <span className="text-secondaryColor font-bold">dog person</span>. I
           also like working on personal side projects that fuse technology with
           creativity.
         </p>

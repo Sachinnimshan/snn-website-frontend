@@ -7,7 +7,7 @@ import {
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import Loader from "../components/loader/Loader";
-import { THEME_COLORS } from "../utils/theme";
+import { APP_COLORS } from "../utils/theme";
 
 const Experience = () => {
   const { data: experiences, isLoading } = useGetExperienceListQuery(undefined);
@@ -20,7 +20,7 @@ const Experience = () => {
       {isLoading ? (
         <Loader loading={isLoading} />
       ) : (
-        <VerticalTimeline lineColor={THEME_COLORS.PRIMARY_WHITE_COLOR}>
+        <VerticalTimeline lineColor={APP_COLORS.PRIMARY_WHITE_COLOR}>
           {experiences
             ?.slice() // Create a shallow copy to avoid mutating the original data
             .sort(
@@ -45,20 +45,20 @@ const Experience = () => {
                 }`}
                 iconStyle={{
                   background: item.current
-                    ? THEME_COLORS.PRIMARY_GREEN_COLOR
-                    : THEME_COLORS.SECONDARY_TEXT_COLOR,
-                  color: THEME_COLORS.PRIMARY_WHITE_COLOR,
+                    ? APP_COLORS.PRIMARY_GREEN_COLOR
+                    : APP_COLORS.SECONDARY_TEXT_COLOR,
+                  color: APP_COLORS.PRIMARY_WHITE_COLOR,
                 }} // yellow-400
                 icon={<FaBriefcase />}
                 contentStyle={{
-                  background: THEME_COLORS.MAIN_BG_COLOR,
-                  color: THEME_COLORS.PRIMARY_TEXT_COLOR,
+                  background: APP_COLORS.MAIN_BG_COLOR,
+                  color: APP_COLORS.PRIMARY_TEXT_COLOR,
                   borderTop: item.current
-                    ? `0.5rem solid ${THEME_COLORS.PRIMARY_GREEN_COLOR}`
+                    ? `0.25rem solid ${APP_COLORS.PRIMARY_GREEN_COLOR}`
                     : "none",
                 }}
                 contentArrowStyle={{
-                  borderRight: `5px solid ${THEME_COLORS.MAIN_BG_COLOR}`,
+                  borderRight: `5px solid ${APP_COLORS.MAIN_BG_COLOR}`,
                 }}
                 dateClassName="text-primaryTextColor font-bold dark:text-gray-200"
               >

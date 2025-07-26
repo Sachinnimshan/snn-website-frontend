@@ -22,7 +22,7 @@ const Skills = () => (
           "
         >
           <Icon
-            className="text-primaryTextColor"
+            className="text-secondaryColor"
             size={22}
             style={{ minWidth: 22, minHeight: 22 }}
           />

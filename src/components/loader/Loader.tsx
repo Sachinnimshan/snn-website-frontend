@@ -1,4 +1,5 @@
 import React from "react";
+import { APP_COLORS } from "../../utils/theme";
 
 type LoaderProps = {
   loading?: boolean;
@@ -14,7 +15,7 @@ const Loader: React.FC<LoaderProps> = ({
   error = null,
   onRetry,
   size = 80,
-  color = "text-yellow-400",
+  color = APP_COLORS.SECONDARY_COLOR,
   overlayBg = "bg-black/60",
 }) => {
   if (!loading && !error) return null;
@@ -29,7 +30,7 @@ const Loader: React.FC<LoaderProps> = ({
       `}
     >
       {error ? (
-        <div className="p-8 bg-[#131921]/90 rounded-2xl shadow-xl flex flex-col items-center border border-yellow-400 max-w-xs">
+        <div className="p-8 bg-secondaryTextColor rounded-2xl shadow-xl flex flex-col items-center border border-yellow-400 max-w-xs">
           <svg
             className="text-yellow-400 mb-4"
             fill="none"
@@ -52,7 +53,7 @@ const Loader: React.FC<LoaderProps> = ({
           {onRetry && (
             <button
               onClick={onRetry}
-              className="px-5 py-2 rounded-lg bg-yellow-400 text-[#131921] font-semibold hover:bg-yellow-300 transition"
+              className="px-5 py-2 rounded-lg bg-yellow-400 text-secondaryTextColor font-semibold hover:bg-yellow-300 transition"
             >
               Retry
             </button>

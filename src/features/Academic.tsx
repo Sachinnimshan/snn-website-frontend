@@ -9,7 +9,8 @@ import {
 import { FaMedal } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import Loader from "../components/loader/Loader";
-import { THEME_COLORS } from "../utils/theme";
+import { APP_COLORS } from "../utils/theme";
+import { RiShieldStarLine } from "react-icons/ri";
 
 const Academic = () => {
   const { data, isLoading } = useGetAcademicListQuery();
@@ -22,7 +23,7 @@ const Academic = () => {
       {isLoading ? (
         <Loader loading={isLoading} />
       ) : (
-        <VerticalTimeline lineColor={THEME_COLORS.PRIMARY_WHITE_COLOR}>
+        <VerticalTimeline lineColor={APP_COLORS.PRIMARY_WHITE_COLOR}>
           {data?.map((item) => (
             <VerticalTimelineElement
               key={item._id}
@@ -30,27 +31,28 @@ const Academic = () => {
                 item.ends
               ).getFullYear()}`}
               iconStyle={{
-                background: THEME_COLORS.SECONDARY_TEXT_COLOR,
-                color: THEME_COLORS.PRIMARY_WHITE_COLOR,
+                background: APP_COLORS.SECONDARY_TEXT_COLOR,
+                color: APP_COLORS.PRIMARY_WHITE_COLOR,
               }}
               icon={<FaGraduationCap />}
               contentStyle={{
-                background: THEME_COLORS.MAIN_BG_COLOR,
-                color: THEME_COLORS.PRIMARY_TEXT_COLOR,
-                borderTop: `0.5rem solid ${THEME_COLORS.SECONDARY_COLOR}`,
+                background: APP_COLORS.MAIN_BG_COLOR,
+                color: APP_COLORS.PRIMARY_TEXT_COLOR,
+                borderTop: `0.25rem solid ${APP_COLORS.SECONDARY_COLOR}`,
               }}
               contentArrowStyle={{
-                borderRight: `7px solid ${THEME_COLORS.SECONDARY_COLOR}`,
+                borderRight: `7px solid ${APP_COLORS.SECONDARY_COLOR}`,
               }}
               className="dark:bg-gray-800 dark:text-gray-100"
               dateClassName="text-primaryTextColor dark:text-secondaryColor"
             >
-              <span className="flex items-center gap-2 text-lg font-semibold text-primaryTextColor dark:text-yellow-300">
+              <span className="flex items-center gap-2 text-base font-semibold text-primaryTextColor dark:text-yellow-300">
                 <FaMedal size={20} className="text-secondaryColor" />
                 {item.title}
               </span>
-              <span className="mt-4 block text-sm text-primaryTextColor dark:text-gray-300 uppercase font-semibold">
-                Grade: {item.grade}
+              <span className="flex items-center gap-2 text-base mt-4 block text-sm text-secondaryTextColor dark:text-gray-300 uppercase font-semibold">
+                <RiShieldStarLine size={20} className="text-secondaryColor" />
+                {item.grade}
               </span>
               <span className="flex items-center gap-2 text-md font-semibold text-secondaryTextColor dark:text-yellow-400 mt-2">
                 <FaLocationDot size={20} className="text-secondaryColor" />

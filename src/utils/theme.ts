@@ -1,4 +1,4 @@
-export const THEME_COLORS = {
+export const APP_COLORS = {
     MAIN_BG_COLOR: "#e3e6e6",
     PRIMARY_WHITE_COLOR: "#ffffff",
     SECONDARY_WHITE_COLOR: "#f0f0f0",
@@ -9,3 +9,8 @@ export const THEME_COLORS = {
     PRIMARY_GREEN_COLOR: "#93d600",
     PRIMARY_YELLOW_COLOR: "#facc15",
 };
+
+export const THEME_COLORS = {
+    THEME_GREEN: "#93d600",
+    THEME_YELLOW: "#facc15",
+}
