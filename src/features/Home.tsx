@@ -40,7 +40,7 @@ export default function Home() {
             <a
               href="/Sachin_Resume.pdf"
               download
-              className="border-2 border-secondaryColor text-secondaryColor rounded-sm px-4 py-2.5 hover:text-black transition flex items-center justify-center gap-2 w-full sm:w-auto"
+              className="border-2 border-secondaryColor text-secondaryColor rounded-sm px-4 py-2.5 transition flex items-center justify-center gap-2 w-full sm:w-auto"
             >
               <FaDownload className="h-5 w-5" />
               Download Resume

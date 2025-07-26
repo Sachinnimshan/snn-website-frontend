@@ -61,10 +61,10 @@ const Certifications = () => {
               <h2 className="text-lg font-semibold text-primaryTextColor mb-1">
                 {cert.title}
               </h2>
-              <p className="text-sm font-medium text-primaryTextColor">
+              <p className="text-sm font-semibold text-secondaryColor uppercase">
                 {cert.issuer}
               </p>
-              <p className="text-sm text-secondaryTextColor mb-2">
+              <p className="text-sm text-primaryTextColor mb-2 mt-1">
                 {cert.date}
               </p>
               <p className="text-secondaryTextColor text-sm mb-4">
@@ -75,7 +75,7 @@ const Certifications = () => {
                   href={cert.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-primaryGreenColor hover:bg-yellow-500 text-gray-700 font-semibold rounded-lg transition shadow focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                  className="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-secondaryColor shadow hover:bg-yellow-500 text-primaryWhiteColor border-2 border-primaryWhiteColor font-semibold rounded-lg transition shadow focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 >
                   View Certificate
                   <FaExternalLinkAlt className="w-3.5 h-3.5" />

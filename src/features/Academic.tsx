@@ -22,7 +22,7 @@ const Academic = () => {
       {isLoading ? (
         <Loader loading={isLoading} />
       ) : (
-        <VerticalTimeline>
+        <VerticalTimeline lineColor={THEME_COLORS.PRIMARY_WHITE_COLOR}>
           {data?.map((item) => (
             <VerticalTimelineElement
               key={item._id}
@@ -30,28 +30,30 @@ const Academic = () => {
                 item.ends
               ).getFullYear()}`}
               iconStyle={{
-                background: THEME_COLORS.PRIMARY_YELLOW_COLOR,
-                color: THEME_COLORS.PRIMARY_TEXT_COLOR,
+                background: THEME_COLORS.SECONDARY_TEXT_COLOR,
+                color: THEME_COLORS.PRIMARY_WHITE_COLOR,
               }}
               icon={<FaGraduationCap />}
               contentStyle={{
                 background: THEME_COLORS.MAIN_BG_COLOR,
-                color: THEME_COLORS.PRIMARY_TEXT_COLOR, // gray-400
-                borderTop: `0.5rem solid ${THEME_COLORS.PRIMARY_YELLOW_COLOR}`,
-                border: `1px solid ${THEME_COLORS.PRIMARY_WHITE_COLOR}`,
+                color: THEME_COLORS.PRIMARY_TEXT_COLOR,
+                borderTop: `0.5rem solid ${THEME_COLORS.SECONDARY_COLOR}`,
+              }}
+              contentArrowStyle={{
+                borderRight: `7px solid ${THEME_COLORS.SECONDARY_COLOR}`,
               }}
               className="dark:bg-gray-800 dark:text-gray-100"
-              dateClassName="text-gray-100 dark:text-gray-200"
+              dateClassName="text-primaryTextColor dark:text-secondaryColor"
             >
-              <span className="flex align-center gap-2 text-lg font-semibold text-primaryTextColor dark:text-yellow-300">
-                <FaMedal size={20} className="text-gray-500" />
+              <span className="flex items-center gap-2 text-lg font-semibold text-primaryTextColor dark:text-yellow-300">
+                <FaMedal size={20} className="text-secondaryColor" />
                 {item.title}
               </span>
-              <span className="mt-15 text-sm text-primaryTextColor dark:text-gray-300 uppercase font-semibold">
+              <span className="mt-4 block text-sm text-primaryTextColor dark:text-gray-300 uppercase font-semibold">
                 Grade: {item.grade}
               </span>
-              <span className="flex align-center gap-2 text-md font-medium text-secondaryTextColor dark:text-yellow-400 mt-2">
-                <FaLocationDot size={20} className="text-yellow-600" />
+              <span className="flex items-center gap-2 text-md font-semibold text-secondaryTextColor dark:text-yellow-400 mt-2">
+                <FaLocationDot size={20} className="text-secondaryColor" />
                 {item.university}
               </span>
               <ul className="list-disc pl-4 text-sm text-primaryTextColor dark:text-gray-300">

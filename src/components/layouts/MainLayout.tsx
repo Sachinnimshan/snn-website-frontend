@@ -39,7 +39,7 @@ const MainLayout = () => {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-primaryTextColor/90 transition border-2 border-primaryTextColor p-2 rounded-full"
+            className="hover:text-secondaryColor hover:border-secondaryColor transition border-2 border-primaryTextColor p-2 rounded-full"
           >
             {link.icon}
           </a>

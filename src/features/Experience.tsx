@@ -44,17 +44,23 @@ const Experience = () => {
                     : "Present"
                 }`}
                 iconStyle={{
-                  background: item.current ? "#93d600" : "#666666",
-                  color: "#ffffff",
+                  background: item.current
+                    ? THEME_COLORS.PRIMARY_GREEN_COLOR
+                    : THEME_COLORS.SECONDARY_TEXT_COLOR,
+                  color: THEME_COLORS.PRIMARY_WHITE_COLOR,
                 }} // yellow-400
                 icon={<FaBriefcase />}
                 contentStyle={{
-                  background: "#e3e6e6",
-                  color: "#1f2937", // gray-800
-                  borderTop: item.current ? "0.75rem solid #93d600" : "none",
+                  background: THEME_COLORS.MAIN_BG_COLOR,
+                  color: THEME_COLORS.PRIMARY_TEXT_COLOR,
+                  borderTop: item.current
+                    ? `0.5rem solid ${THEME_COLORS.PRIMARY_GREEN_COLOR}`
+                    : "none",
                 }}
-                contentArrowStyle={{ borderRight: "7px solid #e5e7eb" }} // gray-200
-                dateClassName="text-gray-100 dark:text-gray-200"
+                contentArrowStyle={{
+                  borderRight: `5px solid ${THEME_COLORS.MAIN_BG_COLOR}`,
+                }}
+                dateClassName="text-primaryTextColor font-bold dark:text-gray-200"
               >
                 <h3 className="text-lg font-bold text-primaryTextColor">
                   {item.jobTitle}
