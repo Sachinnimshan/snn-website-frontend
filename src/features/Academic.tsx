@@ -6,11 +6,10 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import { FaMedal } from "react-icons/fa";
-import { FaLocationDot } from "react-icons/fa6";
 import Loader from "../components/loader/Loader";
 import { APP_COLORS } from "../utils/theme";
-import { RiShieldStarLine } from "react-icons/ri";
+import { SlLocationPin } from "react-icons/sl";
+import { IoMedalOutline } from "react-icons/io5";
 
 const Academic = () => {
   const { data, isLoading } = useGetAcademicListQuery();
@@ -47,15 +46,14 @@ const Academic = () => {
               dateClassName="text-primaryTextColor dark:text-secondaryColor"
             >
               <span className="flex items-center gap-2 text-base font-semibold text-primaryTextColor dark:text-yellow-300">
-                <FaMedal size={20} className="text-secondaryColor" />
                 {item.title}
               </span>
-              <span className="flex items-center gap-2 text-base mt-4 block text-sm text-secondaryTextColor dark:text-gray-300 uppercase font-semibold">
-                <RiShieldStarLine size={20} className="text-secondaryColor" />
+              <span className="flex items-center gap-2 text-base mt-2 block text-sm text-secondaryTextColor dark:text-gray-300 uppercase font-semibold">
+                <IoMedalOutline size={20} className="text-secondaryColor" />
                 {item.grade}
               </span>
               <span className="flex items-center gap-2 text-md font-semibold text-secondaryTextColor dark:text-yellow-400 mt-2">
-                <FaLocationDot size={20} className="text-secondaryColor" />
+                <SlLocationPin size={20} className="text-secondaryColor" />
                 {item.university}
               </span>
               <ul className="list-disc pl-4 text-sm text-primaryTextColor dark:text-gray-300">

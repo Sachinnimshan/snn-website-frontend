@@ -23,11 +23,11 @@ export default {
           "linear-gradient(to right, rgba(245, 245, 245, 0.7), rgba(245, 245, 245, 0.7)), url('/assets/common-bg.svg')",
       },
       colors: {
+        secondaryColor: APP_COLORS.SECONDARY_COLOR,
         mainBgColor: APP_COLORS.MAIN_BG_COLOR,
         primaryWhiteColor: APP_COLORS.PRIMARY_WHITE_COLOR,
         secondaryWhiteColor: APP_COLORS.SECONDARY_WHITE_COLOR,
         secondaryBgColor: APP_COLORS.SECONDARY_BG_COLOR,
-        secondaryColor: APP_COLORS.SECONDARY_COLOR,
         primaryTextColor: APP_COLORS.PRIMARY_TEXT_COLOR,
         secondaryTextColor: APP_COLORS.SECONDARY_TEXT_COLOR,
         primaryGreenColor: APP_COLORS.PRIMARY_GREEN_COLOR,

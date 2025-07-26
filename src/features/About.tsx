@@ -12,29 +12,37 @@ export default function About() {
           deeply passionate about React development, frontend technologies, and
           delivering clean, intuitive UI/UX experiences. I hold a Second-Class
           B.Sc (Hons) in Software Engineering from{" "}
-          <span className="text-blue-400">Cardiff Metropolitan University</span>
+          <span className="text-primaryTextColor font-semibold">
+            Cardiff Metropolitan University
+          </span>
           .
         </p>
 
         <p>
           I have extensive experience developing commercial React-based
           applications for clients across{" "}
-          <span className="text-blue-400">Dubai</span>, the{" "}
-          <span className="text-blue-400">UK</span>, and the{" "}
-          <span className="text-blue-400">US</span>. My work spans diverse
-          domains including e-commerce, tax management, social platforms, and
-          IoT dashboards.
+          <span className="text-primaryTextColor font-semibold">Dubai</span>,
+          the <span className="text-primaryTextColor font-semibold">UK</span>,
+          and the{" "}
+          <span className="text-primaryTextColor font-semibold">US</span>. My
+          work spans diverse domains including e-commerce, tax management,
+          social platforms, and IoT dashboards.
         </p>
 
         <p>
           Currently, I’m working at{" "}
           <span className="text-green-400">Zone24x7</span>, where I contribute
           to building scalable, high-performance web applications using
-          technologies like <span className="text-blue-400">React</span>,{" "}
-          <span className="text-blue-400">Redux</span>,{" "}
-          <span className="text-blue-400">TypeScript</span>, and{" "}
-          <span className="text-blue-400">Node.js</span>, while also integrating
-          cloud services such as <span className="text-blue-400">Azure</span>.
+          technologies like{" "}
+          <span className="text-primaryTextColor font-semibold">React</span>,{" "}
+          <span className="text-primaryTextColor font-semibold">Redux</span>,{" "}
+          <span className="text-primaryTextColor font-semibold">
+            TypeScript
+          </span>
+          , and{" "}
+          <span className="text-primaryTextColor font-semibold">Node.js</span>,
+          while also integrating cloud services such as{" "}
+          <span className="text-primaryTextColor font-semibold">Azure</span>.
         </p>
 
         <p>
@@ -42,9 +50,11 @@ export default function About() {
           <span className="text-purple-400">Spades App</span> and{" "}
           <span className="text-purple-400">Arimac</span>, where I played a key
           role in designing and developing frontend systems using the{" "}
-          <span className="text-blue-400">MERN stack</span>. I’ve built reusable
-          component libraries, scalable design systems, and integrated complex
-          RESTful APIs for enterprise applications.
+          <span className="text-primaryTextColor font-semibold">
+            MERN stack
+          </span>
+          . I’ve built reusable component libraries, scalable design systems,
+          and integrated complex RESTful APIs for enterprise applications.
         </p>
 
         <p>

@@ -45,7 +45,7 @@ const Experience = () => {
                 }`}
                 iconStyle={{
                   background: item.current
-                    ? APP_COLORS.PRIMARY_GREEN_COLOR
+                    ? APP_COLORS.SECONDARY_COLOR
                     : APP_COLORS.SECONDARY_TEXT_COLOR,
                   color: APP_COLORS.PRIMARY_WHITE_COLOR,
                 }} // yellow-400
@@ -54,7 +54,7 @@ const Experience = () => {
                   background: APP_COLORS.MAIN_BG_COLOR,
                   color: APP_COLORS.PRIMARY_TEXT_COLOR,
                   borderTop: item.current
-                    ? `0.25rem solid ${APP_COLORS.PRIMARY_GREEN_COLOR}`
+                    ? `0.25rem solid ${APP_COLORS.SECONDARY_COLOR}`
                     : "none",
                 }}
                 contentArrowStyle={{

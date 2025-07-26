@@ -75,7 +75,7 @@ const Certifications = () => {
                   href={cert.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-secondaryColor shadow hover:bg-yellow-500 text-primaryWhiteColor border-2 border-primaryWhiteColor font-semibold rounded-lg transition shadow focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                  className="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-secondaryColor shadow hover:bg-secondaryTextColor text-primaryWhiteColor border-2 border-primaryWhiteColor font-semibold rounded-lg transition shadow focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 >
                   View Certificate
                   <FaExternalLinkAlt className="w-3.5 h-3.5" />
