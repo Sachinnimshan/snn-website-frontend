@@ -10,6 +10,7 @@ import Loader from "../components/loader/Loader";
 import { APP_COLORS } from "../utils/theme";
 import { useSelector } from "react-redux";
 import type { RootState } from "../store/store";
+import { IoMdArrowDropright } from "react-icons/io";
 
 const Experience = () => {
   const selectedColor = useSelector(
@@ -69,13 +70,18 @@ const Experience = () => {
                 <h3 className="text-lg font-bold text-primaryTextColor">
                   {item.jobTitle}
                 </h3>
-                <h4 className="text-md font-semibold text-secondaryColor">
+                <h4 className="text-md font-semibold text-secondaryColor uppercase">
                   {item.companyName}
                 </h4>
-                <ul className="list-disc pl-4 text-sm mt-2 text-gray-700">
+                <ul className="text-base text-primaryTextColor dark:text-gray-300 mt-2 mb-5">
                   {item.keyroles?.map(
-                    (point: string, idx: number) =>
-                      point && <li key={idx}>{point}</li>
+                    (point, idx) =>
+                      point && (
+                        <li key={idx} className="flex items-center gap-2">
+                          <IoMdArrowDropright className="text-secondaryColor flex-shrink-0" />
+                          <span>{point}</span>
+                        </li>
+                      )
                   )}
                 </ul>
               </VerticalTimelineElement>

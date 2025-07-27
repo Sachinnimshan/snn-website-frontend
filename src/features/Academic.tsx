@@ -11,7 +11,8 @@ import { APP_COLORS } from "../utils/theme";
 import { IoMedalOutline } from "react-icons/io5";
 import { useSelector } from "react-redux";
 import type { RootState } from "../store/store";
-import { FiCheckCircle } from "react-icons/fi";
+import { IoMdArrowDropright } from "react-icons/io";
+import { GiGraduateCap } from "react-icons/gi";
 
 const Academic = () => {
   const selectedColor = useSelector(
@@ -42,38 +43,57 @@ const Academic = () => {
               contentStyle={{
                 background: APP_COLORS.MAIN_BG_COLOR,
                 color: APP_COLORS.PRIMARY_TEXT_COLOR,
-                borderTop: `0.25rem solid ${selectedColor}`,
+                borderTop: `0.3rem solid ${selectedColor}`,
               }}
               contentArrowStyle={{
-                borderRight: `7px solid ${APP_COLORS.MAIN_BG_COLOR}`,
+                borderRight: `8px solid ${APP_COLORS.MAIN_BG_COLOR}`,
               }}
-              className="dark:bg-gray-800 dark:text-gray-100"
-              dateClassName="text-primaryTextColor dark:text-secondaryColor"
+              className="dark:bg-gray-900 dark:text-gray-100 "
+              dateClassName="text-primaryTextColor dark:text-secondaryColor font-semibold"
             >
-              <span className="flex items-center gap-2 text-base font-semibold text-primaryTextColor dark:text-yellow-300">
+              <h3 className="flex items-center gap-2 text-lg font-bold text-primaryTextColor dark:text-yellow-400 mb-3">
                 {item.title}
-              </span>
+              </h3>
 
-              <ul className="text-sm text-primaryTextColor dark:text-gray-300 space-y-1 mt-2 mb-5">
+              <ul className="text-base text-primaryTextColor dark:text-gray-300 space-y-2 mb-5 ">
                 {item.syllabus.map(
                   (point, idx) =>
                     point && (
-                      <li key={idx} className="flex items-center gap-2">
-                        <FiCheckCircle className="text-secondaryColor flex-shrink-0" />
+                      <li
+                        key={idx}
+                        className="flex items-start gap-2"
+                        aria-label={`Syllabus point: ${point}`}
+                      >
+                        <IoMdArrowDropright
+                          className="text-secondaryColor flex-shrink-0 mt-1"
+                          size={18}
+                          aria-hidden="true"
+                        />
                         <span>{point}</span>
                       </li>
                     )
                 )}
               </ul>
-              <span className="flex flex-wrap gap-2 mt-2">
-                <span className="border-2 border-primaryWhiteColor inline-flex items-center gap-1 px-3 py-1 bg-secondaryColor  text-primaryWhiteColor text-sm font-medium rounded-lg uppercase">
-                  <IoMedalOutline size={16} />
+
+              <div className="flex flex-wrap gap-3 mt-3">
+                <span
+                  className="bg-secondaryColor text-primaryWhiteColor inline-flex items-center gap-1 px-4 py-1.5 rounded-lg font-semibold uppercase text-sm cursor-default 
+                border border-transparent"
+                >
+                  <GiGraduateCap size={18} aria-hidden="true" />
                   {item.grade}
                 </span>
-                <span className="border-2 border-primaryWhiteColor inline-flex items-center gap-1 px-3 py-1 bg-secondaryColor  text-primaryWhiteColor text-sm font-medium rounded-lg uppercase">
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.cardiffmet.ac.uk/"
+                  className="bg-secondaryColor text-primaryWhiteColor inline-flex items-center gap-1 px-4 py-1.5 rounded-lg font-semibold uppercase text-sm cursor-default 
+                border border-transparent"
+                >
+                  <IoMedalOutline size={18} aria-hidden="true" />
                   {item.university}
-                </span>
-              </span>
+                </a>
+              </div>
             </VerticalTimelineElement>
           ))}
         </VerticalTimeline>

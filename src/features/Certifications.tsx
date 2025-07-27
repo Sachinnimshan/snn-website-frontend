@@ -7,7 +7,7 @@ const certifications = [
     id: 1,
     title: "React Basics",
     issuer: "Coursera / Meta",
-    date: "Jan 2024",
+    date: "January 2024",
     description:
       "Mastered the essentials of React—including components, props, state, events, JSX, and hooks. Built dynamic user interfaces using declarative programming patterns, learned about component composition, and gained an understanding of React's rendering lifecycle.",
     link: "https://www.coursera.org/account/accomplishments/certificate/UCNP272ACFPD",
@@ -75,7 +75,7 @@ const Certifications = () => {
                   href={cert.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-secondaryColor shadow hover:bg-secondaryTextColor text-primaryWhiteColor border-2 border-primaryWhiteColor font-semibold rounded-lg transition shadow focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                  className="uppercase inline-flex items-center gap-2 px-4 py-2 mt-2 bg-secondaryColor shadow hover:bg-secondaryTextColor text-primaryWhiteColor  font-semibold rounded-lg transition shadow focus:outline-none focus:ring-2 focus:ring-yellow-500"
                 >
                   View Certificate
                   <FaExternalLinkAlt className="w-3.5 h-3.5" />

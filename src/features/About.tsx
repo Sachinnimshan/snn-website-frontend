@@ -12,7 +12,7 @@ export default function About() {
           deeply passionate about React development, frontend technologies, and
           delivering clean, intuitive UI/UX experiences. I hold a Second-Class
           B.Sc (Hons) in Software Engineering from{" "}
-          <span className="text-primaryTextColor font-semibold">
+          <span className="text-primaryTextColor font-semibold uppercase">
             Cardiff Metropolitan University
           </span>
           .
@@ -21,11 +21,18 @@ export default function About() {
         <p>
           I have extensive experience developing commercial React-based
           applications for clients across{" "}
-          <span className="text-primaryTextColor font-semibold">Dubai</span>,
-          the <span className="text-primaryTextColor font-semibold">UK</span>,
-          and the{" "}
-          <span className="text-primaryTextColor font-semibold">US</span>. My
-          work spans diverse domains including e-commerce, tax management,
+          <span className="text-primaryTextColor font-semibold uppercase">
+            Dubai
+          </span>
+          , the{" "}
+          <span className="text-primaryTextColor font-semibold uppercase">
+            UK
+          </span>
+          , and the{" "}
+          <span className="text-primaryTextColor font-semibold uppercase">
+            US
+          </span>
+          . My work spans diverse domains including e-commerce, tax management,
           social platforms, and IoT dashboards.
         </p>
 
@@ -34,15 +41,26 @@ export default function About() {
           <span className="text-green-400">Zone24x7</span>, where I contribute
           to building scalable, high-performance web applications using
           technologies like{" "}
-          <span className="text-primaryTextColor font-semibold">React</span>,{" "}
-          <span className="text-primaryTextColor font-semibold">Redux</span>,{" "}
-          <span className="text-primaryTextColor font-semibold">
+          <span className="text-primaryTextColor font-semibold uppercase">
+            React
+          </span>
+          ,{" "}
+          <span className="text-primaryTextColor font-semibold uppercase">
+            Redux
+          </span>
+          ,{" "}
+          <span className="text-primaryTextColor font-semibold uppercase">
             TypeScript
           </span>
           , and{" "}
-          <span className="text-primaryTextColor font-semibold">Node.js</span>,
-          while also integrating cloud services such as{" "}
-          <span className="text-primaryTextColor font-semibold">Azure</span>.
+          <span className="text-primaryTextColor font-semibold uppercase">
+            Node.js
+          </span>
+          , while also integrating cloud services such as{" "}
+          <span className="text-primaryTextColor font-semibold uppercase">
+            Azure
+          </span>
+          .
         </p>
 
         <p>
@@ -66,14 +84,19 @@ export default function About() {
 
         <p>
           Outside of tech, I enjoy{" "}
-          <span className="text-secondaryColor font-bold">fish keeping</span>,{" "}
-          <span className="text-secondaryColor font-bold">
+          <span className="text-secondaryColor font-bold uppercase">
+            fish keeping
+          </span>
+          ,{" "}
+          <span className="text-secondaryColor font-bold uppercase">
             watching cricket
           </span>
           , and I'm proudly a{" "}
-          <span className="text-secondaryColor font-bold">dog person</span>. I
-          also like working on personal side projects that fuse technology with
-          creativity.
+          <span className="text-secondaryColor font-bold uppercase">
+            dog person
+          </span>
+          . I also like working on personal side projects that fuse technology
+          with creativity.
         </p>
       </div>
     </PageWrapper>

@@ -43,7 +43,7 @@ export default function Projects() {
                 <h2 className="text-xl font-semibold text-primaryTextColor dark:text-white mb-2">
                   {project.title}
                 </h2>
-                <p className="text-secondaryTextColor font-medium dark:text-gray-300 text-base">
+                <p className="text-primaryTextColor font-base dark:text-gray-300 text-base">
                   {project.description}
                 </p>
               </div>
