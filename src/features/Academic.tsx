@@ -8,10 +8,10 @@ import {
 } from "react-vertical-timeline-component";
 import Loader from "../components/loader/Loader";
 import { APP_COLORS } from "../utils/theme";
-import { SlLocationPin } from "react-icons/sl";
 import { IoMedalOutline } from "react-icons/io5";
 import { useSelector } from "react-redux";
 import type { RootState } from "../store/store";
+import { FiCheckCircle } from "react-icons/fi";
 
 const Academic = () => {
   const selectedColor = useSelector(
@@ -53,19 +53,27 @@ const Academic = () => {
               <span className="flex items-center gap-2 text-base font-semibold text-primaryTextColor dark:text-yellow-300">
                 {item.title}
               </span>
-              <span className="flex items-center gap-2 text-base mt-2 block text-sm text-secondaryTextColor dark:text-gray-300 uppercase font-semibold">
-                <IoMedalOutline size={20} className="text-secondaryColor" />
-                {item.grade}
-              </span>
-              <span className="flex items-center gap-2 text-md font-semibold text-secondaryTextColor dark:text-yellow-400 mt-2">
-                <SlLocationPin size={20} className="text-secondaryColor" />
-                {item.university}
-              </span>
-              <ul className="list-disc pl-4 text-sm text-primaryTextColor dark:text-gray-300">
+
+              <ul className="text-sm text-primaryTextColor dark:text-gray-300 space-y-1 mt-2 mb-5">
                 {item.syllabus.map(
-                  (point, idx) => point && <li key={idx}>{point}</li>
+                  (point, idx) =>
+                    point && (
+                      <li key={idx} className="flex items-center gap-2">
+                        <FiCheckCircle className="text-secondaryColor flex-shrink-0" />
+                        <span>{point}</span>
+                      </li>
+                    )
                 )}
               </ul>
+              <span className="flex flex-wrap gap-2 mt-2">
+                <span className="border-2 border-primaryWhiteColor inline-flex items-center gap-1 px-3 py-1 bg-secondaryColor  text-primaryWhiteColor text-sm font-medium rounded-lg uppercase">
+                  <IoMedalOutline size={16} />
+                  {item.grade}
+                </span>
+                <span className="border-2 border-primaryWhiteColor inline-flex items-center gap-1 px-3 py-1 bg-secondaryColor  text-primaryWhiteColor text-sm font-medium rounded-lg uppercase">
+                  {item.university}
+                </span>
+              </span>
             </VerticalTimelineElement>
           ))}
         </VerticalTimeline>

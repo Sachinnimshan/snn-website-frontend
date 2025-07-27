@@ -26,22 +26,21 @@ const ThemeToggle = () => {
     <button
       onClick={toggleColor}
       aria-label="Toggle secondary color"
-      className={`
-        fixed left-0 top-1/3
-        flex items-center justify-center
-        w-12 h-12
-        rounded-r-lg
-        shadow-lg
-        transition-colors duration-300 ease-in-out
-        focus:shadow-outline
-        text-white
-        cursor-pointer
-      `}
-      style={{ backgroundColor: selectedColor }}
+      className="
+  fixed right-0 top-20
+  flex items-center justify-center
+  w-12 h-12
+  rounded-l-lg
+  shadow-lg
+  transition-colors duration-300 ease-in-out
+  focus:shadow-outline
+  text-white
+  cursor-pointer
+  bg-secondaryColor
+  z-[3000]
+"
     >
-      {/* Use React Icon instead of SVG */}
       <MdOutlinePalette size={24} aria-hidden="true" />
-      <span className="sr-only">Toggle secondary color</span>
     </button>
   );
 };

@@ -51,6 +51,7 @@ const Experience = () => {
                 iconStyle={{
                   background: selectedColor,
                   color: APP_COLORS.PRIMARY_WHITE_COLOR,
+                  opacity: item.current ? 1 : 0.5,
                 }} // yellow-400
                 icon={<FaBriefcase />}
                 contentStyle={{
