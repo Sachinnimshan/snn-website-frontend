@@ -21,7 +21,7 @@ export default function Home() {
             Hey, I'm Sachin Nimshan
           </h1>
           <h2 className="text-lg sm:text-2xl md:text-3xl font-semibold mt-2 sm:mt-5 text-gray-700 drop-shadow-md">
-            Frontend Engineer ( React | TypeScript | UI/UX )
+            <span className="text-secondaryColor drop-shadow-xs uppercase">Frontend Engineer</span> ( React | TypeScript | UI/UX )
           </h2>
           <p className="mt-3 sm:mt-4 text-gray-600 text-base sm:text-base md:text-lg leading-relaxed max-w-xl sm:max-w-5xl">
             Passionate software engineer building modern, intuitive, and

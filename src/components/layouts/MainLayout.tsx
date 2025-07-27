@@ -3,6 +3,7 @@ import Footer from "../footer/Footer";
 import { FaLinkedin, FaGithub, FaFacebook, FaYoutube } from "react-icons/fa";
 import ScrollToTop from "./ScrollToTop";
 import { Outlet } from "react-router-dom";
+import ThemeToggle from "../theme/ThemeToggle";
 
 const MainLayout = () => {
   const socialMediaLinks = [
@@ -28,6 +29,7 @@ const MainLayout = () => {
     <div className="min-h-screen flex flex-col text-white relative overflow-hidden">
       <ScrollToTop />
       <Header />
+
       <main>
         <Outlet />
       </main>
@@ -45,7 +47,7 @@ const MainLayout = () => {
           </a>
         ))}
       </div>
-
+      <ThemeToggle />
       <Footer />
     </div>
   );

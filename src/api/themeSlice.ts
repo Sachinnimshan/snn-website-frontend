@@ -1,14 +1,14 @@
 // src/store/themeSlice.ts
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import { APP_COLORS } from "../utils/theme";
+import { THEME_COLORS } from "../utils/theme";
 
 type ThemeState = {
     secondaryColor: string;
 };
 
 const initialState: ThemeState = {
-    secondaryColor: APP_COLORS.SECONDARY_COLOR, // default initial color
+    secondaryColor: THEME_COLORS.THEME_BLUE, // default initial color
 };
 
 const themeSlice = createSlice({

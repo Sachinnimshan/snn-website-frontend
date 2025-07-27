@@ -10,8 +10,13 @@ import Loader from "../components/loader/Loader";
 import { APP_COLORS } from "../utils/theme";
 import { SlLocationPin } from "react-icons/sl";
 import { IoMedalOutline } from "react-icons/io5";
+import { useSelector } from "react-redux";
+import type { RootState } from "../store/store";
 
 const Academic = () => {
+  const selectedColor = useSelector(
+    (state: RootState) => state.theme.secondaryColor
+  );
   const { data, isLoading } = useGetAcademicListQuery();
 
   return (
@@ -30,17 +35,17 @@ const Academic = () => {
                 item.ends
               ).getFullYear()}`}
               iconStyle={{
-                background: APP_COLORS.SECONDARY_TEXT_COLOR,
+                background: selectedColor,
                 color: APP_COLORS.PRIMARY_WHITE_COLOR,
               }}
               icon={<FaGraduationCap />}
               contentStyle={{
                 background: APP_COLORS.MAIN_BG_COLOR,
                 color: APP_COLORS.PRIMARY_TEXT_COLOR,
-                borderTop: `0.25rem solid ${APP_COLORS.SECONDARY_COLOR}`,
+                borderTop: `0.25rem solid ${selectedColor}`,
               }}
               contentArrowStyle={{
-                borderRight: `7px solid ${APP_COLORS.SECONDARY_COLOR}`,
+                borderRight: `7px solid ${APP_COLORS.MAIN_BG_COLOR}`,
               }}
               className="dark:bg-gray-800 dark:text-gray-100"
               dateClassName="text-primaryTextColor dark:text-secondaryColor"

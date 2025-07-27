@@ -16,7 +16,6 @@ import {
     SiMui,
     SiCss3,
     SiHtml5,
-    SiSass,
     SiJest,
     SiNetlify,
     SiJira,
@@ -29,6 +28,7 @@ import {
 import { TbBrandCSharp } from "react-icons/tb";
 import { FaNodeJs } from "react-icons/fa";
 import { DiVisualstudio } from "react-icons/di";
+import { FaSass } from "react-icons/fa6";
 
 export const skills = [
     { id: 1, name: "JavaScript", icon: SiJavascript },
@@ -48,7 +48,7 @@ export const skills = [
     { id: 15, name: "Material UI", icon: SiMui },
     { id: 16, name: "CSS3", icon: SiCss3 },
     { id: 17, name: "HTML5", icon: SiHtml5 },
-    { id: 18, name: "SASS", icon: SiSass },
+    { id: 18, name: "SASS", icon: FaSass },
     { id: 19, name: "Jest", icon: SiJest },
     { id: 20, name: "Netlify", icon: SiNetlify },
     { id: 21, name: "Jira", icon: SiJira },

@@ -8,8 +8,13 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import Loader from "../components/loader/Loader";
 import { APP_COLORS } from "../utils/theme";
+import { useSelector } from "react-redux";
+import type { RootState } from "../store/store";
 
 const Experience = () => {
+  const selectedColor = useSelector(
+    (state: RootState) => state.theme.secondaryColor
+  );
   const { data: experiences, isLoading } = useGetExperienceListQuery(undefined);
 
   return (
@@ -44,9 +49,7 @@ const Experience = () => {
                     : "Present"
                 }`}
                 iconStyle={{
-                  background: item.current
-                    ? APP_COLORS.SECONDARY_COLOR
-                    : APP_COLORS.SECONDARY_TEXT_COLOR,
+                  background: selectedColor,
                   color: APP_COLORS.PRIMARY_WHITE_COLOR,
                 }} // yellow-400
                 icon={<FaBriefcase />}
@@ -54,7 +57,7 @@ const Experience = () => {
                   background: APP_COLORS.MAIN_BG_COLOR,
                   color: APP_COLORS.PRIMARY_TEXT_COLOR,
                   borderTop: item.current
-                    ? `0.25rem solid ${APP_COLORS.SECONDARY_COLOR}`
+                    ? `0.5rem solid ${selectedColor}`
                     : "none",
                 }}
                 contentArrowStyle={{
