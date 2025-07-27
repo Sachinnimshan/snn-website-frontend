@@ -27,7 +27,7 @@ const ThemeToggle = () => {
       onClick={toggleColor}
       aria-label="Toggle secondary color"
       className="
-  fixed right-0 top-20
+  fixed right-0 top-1/3
   flex items-center justify-center
   w-12 h-12
   rounded-l-lg

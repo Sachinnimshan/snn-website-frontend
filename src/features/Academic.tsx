@@ -55,7 +55,7 @@ const Academic = () => {
                 {item.title}
               </h3>
 
-              <ul className="text-base text-primaryTextColor dark:text-gray-300 space-y-2 mb-5 ">
+              <ul className="text-base text-thirdTextColor dark:text-gray-300 space-y-2 mb-5 ">
                 {item.syllabus.map(
                   (point, idx) =>
                     point && (

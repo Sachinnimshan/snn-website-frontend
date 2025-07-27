@@ -14,7 +14,7 @@ const Skills = () => (
             bg-mainBgColor
             flex items-center gap-2 sm:gap-3
             border-2 p-3 sm:p-4 md:p-5
-            rounded-xl shadow border-primaryWhiteColor
+            rounded-xl shadow-sm border-primaryWhiteColor
             hover:border-secondaryColor
             transition-colors cursor-pointer
             min-w-[130px] sm:min-w-[155px] md:min-w-[180px]
@@ -26,7 +26,7 @@ const Skills = () => (
             size={22}
             style={{ minWidth: 22, minHeight: 22 }}
           />
-          <span className="text-primaryTextColor text-xs sm:text-sm md:text-lg font-medium">
+          <span className="text-secondaryTextColor text-xs sm:text-sm md:text-lg font-medium">
             {name}
           </span>
         </div>

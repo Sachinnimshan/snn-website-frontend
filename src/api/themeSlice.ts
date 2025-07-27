@@ -8,7 +8,7 @@ type ThemeState = {
 };
 
 const initialState: ThemeState = {
-    secondaryColor: THEME_COLORS.THEME_BLUE, // default initial color
+    secondaryColor: THEME_COLORS.THEME_TEAL, // default initial color
 };
 
 const themeSlice = createSlice({

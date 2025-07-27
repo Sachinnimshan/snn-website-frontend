@@ -29,7 +29,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8 text-base font-semibold text-gray-700 uppercase tracking-wide">
+        <nav className="hidden md:flex items-center gap-8 text-base font-semibold text-primaryTextColor uppercase tracking-wide">
           {navLinks.map((link) => (
             <Link
               key={link.name}

@@ -60,7 +60,7 @@ const Contact = () => {
             <span>Walasmulla, Sri Lanka</span>
           </div>
 
-          <div className="flex gap-6 mt-6  justify-center">
+          <div className="flex gap-6 mt-6  justify-center md:hidden">
             <a
               href="https://linkedin.com/in/sachin-nimshan"
               target="_blank"
@@ -106,7 +106,9 @@ const Contact = () => {
           className="space-y-6 bg-primaryWhiteColor p-6 rounded-lg shadow-lg"
         >
           <div>
-            <label className="block text-sm text-gray-300 mb-1">Name</label>
+            <label className="block text-sm text-thirdTextColor mb-1 font-semibold">
+              Name
+            </label>
             <input
               type="text"
               name="name"
@@ -117,7 +119,9 @@ const Contact = () => {
             />
           </div>
           <div>
-            <label className="block text-sm text-gray-300 mb-1">Email</label>
+            <label className="block text-sm text-thirdTextColor mb-1 font-semibold">
+              Email
+            </label>
             <input
               type="email"
               name="email"
@@ -128,7 +132,9 @@ const Contact = () => {
             />
           </div>
           <div>
-            <label className="block text-sm text-gray-300 mb-1">Message</label>
+            <label className="block text-sm text-thirdTextColor mb-1 font-semibold">
+              Message
+            </label>
             <textarea
               name="message"
               value={formData.message}

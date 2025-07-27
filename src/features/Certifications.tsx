@@ -55,7 +55,7 @@ const Certifications = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: idx * 0.15 }}
-            className="cursor-pointer bg-mainBgColor border border-primaryWhiteColor rounded-xl shadow-xs  transition duration-300 p-6 flex flex-col gap-4 relative"
+            className="cursor-pointer bg-mainBgColor border border-primaryWhiteColor rounded-xl shadow-sm  transition duration-300 p-6 flex flex-col gap-4 relative"
           >
             <div className="mt-3">
               <h2 className="text-lg font-semibold text-primaryTextColor mb-1">
@@ -64,10 +64,10 @@ const Certifications = () => {
               <p className="text-sm font-semibold text-secondaryColor uppercase">
                 {cert.issuer}
               </p>
-              <p className="text-sm text-primaryTextColor mb-2 mt-1">
+              <p className="text-sm text-thirdTextColor font-semibold mb-2 mt-1">
                 {cert.date}
               </p>
-              <p className="text-secondaryTextColor text-sm mb-4">
+              <p className="text-thirdTextColor text-sm mb-4">
                 {cert.description}
               </p>
               {cert.link ? (

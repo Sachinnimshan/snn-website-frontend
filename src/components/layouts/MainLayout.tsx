@@ -8,19 +8,19 @@ import ThemeToggle from "../theme/ThemeToggle";
 const MainLayout = () => {
   const socialMediaLinks = [
     {
-      icon: <FaGithub className="w-6 h-6" />,
+      icon: <FaGithub className="w-8 h-8" />,
       url: "https://github.com/your-username",
     },
     {
-      icon: <FaLinkedin className="w-6 h-6" />,
+      icon: <FaLinkedin className="w-8 h-8" />,
       url: "https://www.linkedin.com/in/sachin-nimshan/",
     },
     {
-      icon: <FaFacebook className="w-6 h-6" />,
+      icon: <FaFacebook className="w-8 h-8" />,
       url: "https://www.facebook.com/sachin.nimshan",
     },
     {
-      icon: <FaYoutube className="w-6 h-6" />,
+      icon: <FaYoutube className="w-8 h-8" />,
       url: "https://www.youtube.com/@sachinnimshan/featured",
     },
   ];
@@ -34,14 +34,14 @@ const MainLayout = () => {
         <Outlet />
       </main>
 
-      <div className="hidden md:flex fixed right-4 top-1/3 z-50 flex-col items-center gap-4 text-primaryTextColor  p-3  mr-2">
+      <div className="rounded-r-lg bg-primaryWhiteColor hidden md:flex fixed left-0 top-1/3 z-50 flex-col items-center gap-4 text-primaryTextColor  p-3  mr-2 shadow-lg">
         {socialMediaLinks.map((link, index) => (
           <a
             key={index}
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-secondaryColor hover:border-secondaryColor transition border-2 border-primaryTextColor p-2 rounded-full"
+            className="hover:text-secondaryColor hover:border-secondaryColor transition  p-2"
           >
             {link.icon}
           </a>

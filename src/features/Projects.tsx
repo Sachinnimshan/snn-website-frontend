@@ -26,7 +26,7 @@ export default function Projects() {
           {projects?.map((project: Project, i: number) => (
             <motion.div
               key={project._id}
-              className="bg-mainBgColor border-primaryWhiteColor rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col border hover:shadow-md border-2"
+              className="shadow-sm bg-mainBgColor border-primaryWhiteColor rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col border hover:shadow-md border-2"
               custom={i}
               initial="hidden"
               animate="visible"

@@ -73,7 +73,7 @@ const Experience = () => {
                 <h4 className="text-md font-semibold text-secondaryColor uppercase">
                   {item.companyName}
                 </h4>
-                <ul className="text-base text-primaryTextColor dark:text-gray-300 mt-2 mb-5">
+                <ul className="text-base text-thirdTextColor dark:text-gray-300 mt-2 mb-5">
                   {item.keyroles?.map(
                     (point, idx) =>
                       point && (
