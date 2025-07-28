@@ -10,7 +10,7 @@ const ProjectDetails = () => {
   const { data: project, isLoading } = useGetProjectDetailsQuery(projectId);
 
   return (
-    <PageWrapper title={project?.title} description={project?.description}>
+    <PageWrapper title={project?.title}>
       {isLoading ? (
         <Loader loading={isLoading} />
       ) : (
@@ -30,20 +30,24 @@ const ProjectDetails = () => {
               ))}
             </div>
           </div>
-
-          {/* Gallery - show first image if multiple */}
-          {project?.gallery && project.gallery.length > 0 && (
-            <div className="mb-8">
-              <img
-                src={project.gallery[0]}
-                alt={`${project.title} screenshot`}
-                className="w-full rounded-lg shadow-lg object-cover max-h-[400px] mx-auto"
-              />
-            </div>
+          {project?.description && (
+            <p className="text-lg text-primaryTextColor mb-4 leading-relaxed text-center text-justify">
+              {project.description}
+            </p>
           )}
-
           {/* Action Links */}
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-4 mb-4">
+            {project?.demo && (
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-5 py-2 rounded-md border-2 border-blue-500 text-blue-600 hover:bg-blue-100 dark:hover:bg-blue-800 transition font-semibold"
+              >
+                <FaGlobe size={20} />
+                Live Demo
+              </a>
+            )}
             {project?.github && (
               <a
                 href={project.github}
@@ -66,18 +70,17 @@ const ProjectDetails = () => {
                 YouTube
               </a>
             )}
-            {project?.demo && (
-              <a
-                href={project.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-5 py-2 rounded-md border-2 border-blue-500 text-blue-600 hover:bg-blue-100 dark:hover:bg-blue-800 transition font-semibold"
-              >
-                <FaGlobe size={20} />
-                Live Demo
-              </a>
-            )}
           </div>
+          {/* Gallery - show first image if multiple */}
+          {project?.gallery && project.gallery.length > 0 && (
+            <div className="mb-8">
+              <img
+                src={project.gallery[0]}
+                alt={`${project.title} screenshot`}
+                className="w-full rounded-lg shadow-lg object-cover  mx-auto"
+              />
+            </div>
+          )}
         </>
       )}
     </PageWrapper>

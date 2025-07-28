@@ -17,8 +17,8 @@ const cardVariants = {
 
 function truncateText(text: string) {
   if (!text) return "";
-  if (text.length <= 200) return text;
-  return text.slice(0, 200) + "...";
+  if (text.length <= 150) return text;
+  return text.slice(0, 150) + "...";
 }
 
 export default function Projects() {
@@ -52,17 +52,28 @@ export default function Projects() {
                 <h2 className="text-xl font-semibold text-primaryTextColor dark:text-white mb-1">
                   {project.title}
                 </h2>
-                <p className="text-secondaryTextColor font-base dark:text-gray-300 text-base">
+                <p className="text-secondaryTextColor font-base dark:text-gray-300 text-base leading-relaxed">
                   {truncateText(project.description)}
                 </p>
               </div>
               <div className="p-4 pt-0 flex gap-3">
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-secondaryBgColor flex items-center gap-1 px-3 py-1 text-sm rounded-lg font-semibold border-2 border-blue-400 text-blue-500 hover:bg-blue-50 dark:hover:bg-gray-700 transition"
+                  >
+                    <FaGlobe size={16} />
+                    Live
+                  </a>
+                )}
                 {project.github && (
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 px-3 py-1 text-sm rounded-full border-2 border-green-500 text-green-500 dark:border-green-600 hover:bg-green-100 dark:hover:bg-gray-700 transition"
+                    className="bg-secondaryBgColor flex items-center gap-1 px-3 py-1 text-sm font-semibold rounded-lg border-2 border-green-700 text-green-700 dark:border-green-600 hover:bg-green-100 dark:hover:bg-gray-700 transition"
                   >
                     <FaGithub size={16} />
                     GitHub
@@ -73,21 +84,10 @@ export default function Projects() {
                     href={project.youtube}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 px-3 py-1 text-sm rounded-full border-2 border-red-400 text-red-500 hover:bg-red-50 dark:hover:bg-gray-700 transition"
+                    className="bg-secondaryBgColor flex items-center gap-1 px-3 py-1 text-sm  font-semibold rounded-lg border-2 border-red-400 text-red-500 hover:bg-red-50 dark:hover:bg-gray-700 transition"
                   >
                     <FaYoutube size={16} />
                     YouTube
-                  </a>
-                )}
-                {project.demo && (
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1 px-3 py-1 text-sm rounded-full border-2 border-blue-400 text-blue-500 hover:bg-blue-50 dark:hover:bg-gray-700 transition"
-                  >
-                    <FaGlobe size={16} />
-                    Live
                   </a>
                 )}
               </div>

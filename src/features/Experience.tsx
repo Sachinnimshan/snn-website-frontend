@@ -63,7 +63,7 @@ const Experience = () => {
                     : "none",
                 }}
                 contentArrowStyle={{
-                  borderRight: `5px solid ${APP_COLORS.MAIN_BG_COLOR}`,
+                  borderRight: `5px solid ${APP_COLORS.CONTENT_BACKGROUND_COLOR}`,
                 }}
                 dateClassName="text-primaryTextColor font-bold dark:text-gray-200"
               >
@@ -73,7 +73,7 @@ const Experience = () => {
                 <h4 className="text-md font-semibold text-secondaryColor uppercase">
                   {item.companyName}
                 </h4>
-                <ul className="text-base text-thirdTextColor dark:text-gray-300 mt-2 mb-5">
+                <ul className="text-base text-thirdTextColor dark:text-gray-300 mt-2 mb-5 space-y-2">
                   {item.keyroles?.map(
                     (point, idx) =>
                       point && (

@@ -64,7 +64,7 @@ const Certifications = () => {
               <p className="text-base font-semibold text-secondaryColor uppercase">
                 {cert.issuer}
               </p>
-              <p className="text-sm text-thirdTextColor font-semibold mb-2 mt-1">
+              <p className="text-sm text-thirdTextColor font-medium mb-2 mt-1 uppercase">
                 {cert.date}
               </p>
               <p className="text-thirdTextColor text-base mb-4">
