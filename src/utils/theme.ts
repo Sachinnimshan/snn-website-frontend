@@ -7,6 +7,7 @@ export const APP_COLORS = {
     SECONDARY_TEXT_COLOR: "#555555",
     THIRD_TEXT_COLOR: "#666666",
     SECONDARY_COLOR: "#4169E1",
+    CONTENT_BACKGROUND_COLOR: "#e7e7e7"
 };
 
 export const THEME_COLORS = {

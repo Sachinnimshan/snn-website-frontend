@@ -37,10 +37,10 @@ const Skills = () => (
         <motion.div
           key={name}
           className="
-            bg-mainBgColor
+            bg-contentBgColor
             flex items-center gap-2 sm:gap-3
             border-2 p-3 sm:p-4 md:p-5
-            rounded-full shadow-sm border-primaryWhiteColor
+            rounded-lg
             hover:border-secondaryColor
             transition-colors cursor-pointer
             min-w-[130px] sm:min-w-[155px] md:min-w-[180px]

@@ -41,7 +41,7 @@ const Academic = () => {
               }}
               icon={<FaGraduationCap />}
               contentStyle={{
-                background: APP_COLORS.MAIN_BG_COLOR,
+                background: APP_COLORS.CONTENT_BACKGROUND_COLOR,
                 color: APP_COLORS.PRIMARY_TEXT_COLOR,
                 borderTop: `0.3rem solid ${selectedColor}`,
               }}

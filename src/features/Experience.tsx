@@ -56,7 +56,7 @@ const Experience = () => {
                 }} // yellow-400
                 icon={<FaBriefcase />}
                 contentStyle={{
-                  background: APP_COLORS.MAIN_BG_COLOR,
+                  background: APP_COLORS.CONTENT_BACKGROUND_COLOR,
                   color: APP_COLORS.PRIMARY_TEXT_COLOR,
                   borderTop: item.current
                     ? `0.5rem solid ${selectedColor}`

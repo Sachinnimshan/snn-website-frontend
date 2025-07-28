@@ -55,7 +55,7 @@ const Certifications = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: idx * 0.15 }}
-            className="cursor-pointer bg-mainBgColor border border-primaryWhiteColor rounded-xl shadow-sm  transition duration-300 p-6 flex flex-col gap-4 relative"
+            className="cursor-pointer bg-contentBgColor border border-primaryWhiteColor rounded-xl shadow-sm  transition duration-300 p-6 flex flex-col gap-4 relative"
           >
             <div className="mt-3">
               <h2 className="text-lg font-semibold text-primaryTextColor mb-1">

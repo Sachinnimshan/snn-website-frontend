@@ -31,6 +31,7 @@ export default {
         primaryTextColor: APP_COLORS.PRIMARY_TEXT_COLOR,
         secondaryTextColor: APP_COLORS.SECONDARY_TEXT_COLOR,
         thirdTextColor: APP_COLORS.THIRD_TEXT_COLOR,
+        contentBgColor: APP_COLORS.CONTENT_BACKGROUND_COLOR,
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
