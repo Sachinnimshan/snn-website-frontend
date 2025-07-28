@@ -23,7 +23,7 @@ const ProjectDetails = () => {
               {project?.languages.map((lang: string) => (
                 <span
                   key={lang}
-                  className="px-3 py-1 bg-mainBgColor dark:bg-gray-700 text-gray-800 dark:text-gray-300 rounded-full text-xs sm:text-sm font-medium"
+                  className="px-3 py-1 bg-mainBgColor dark:bg-gray-700 text-gray-800 dark:text-gray-300 rounded-full text-xs sm:text-base font-medium shadow-xs"
                 >
                   {lang}
                 </span>

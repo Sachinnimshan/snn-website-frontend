@@ -15,6 +15,12 @@ const cardVariants = {
   }),
 };
 
+function truncateText(text: string) {
+  if (!text) return "";
+  if (text.length <= 200) return text;
+  return text.slice(0, 200) + "...";
+}
+
 export default function Projects() {
   const { data: projects, isLoading } = useGetProjectListQuery(undefined);
   const navigate = useNavigate();
@@ -43,11 +49,11 @@ export default function Projects() {
                 />
               )}
               <div className="p-4 flex-grow">
-                <h2 className="text-xl font-semibold text-primaryTextColor dark:text-white mb-2">
+                <h2 className="text-xl font-semibold text-primaryTextColor dark:text-white mb-1">
                   {project.title}
                 </h2>
-                <p className="text-primaryTextColor font-base dark:text-gray-300 text-base">
-                  {project.description}
+                <p className="text-secondaryTextColor font-base dark:text-gray-300 text-base">
+                  {truncateText(project.description)}
                 </p>
               </div>
               <div className="p-4 pt-0 flex gap-3">
