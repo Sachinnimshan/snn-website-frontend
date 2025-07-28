@@ -58,16 +58,16 @@ const Certifications = () => {
             className="cursor-pointer bg-contentBgColor border border-primaryWhiteColor rounded-xl shadow-sm  transition duration-300 p-6 flex flex-col gap-4 relative"
           >
             <div className="mt-3">
-              <h2 className="text-lg font-semibold text-primaryTextColor mb-1">
+              <h2 className="text-xl font-semibold text-primaryTextColor mb-1">
                 {cert.title}
               </h2>
-              <p className="text-sm font-semibold text-secondaryColor uppercase">
+              <p className="text-base font-semibold text-secondaryColor uppercase">
                 {cert.issuer}
               </p>
               <p className="text-sm text-thirdTextColor font-semibold mb-2 mt-1">
                 {cert.date}
               </p>
-              <p className="text-thirdTextColor text-sm mb-4">
+              <p className="text-thirdTextColor text-base mb-4">
                 {cert.description}
               </p>
               {cert.link ? (
