@@ -77,7 +77,7 @@ const Academic = () => {
 
               <div className="flex flex-wrap gap-3 mt-3">
                 <span
-                  className="bg-secondaryColor text-primaryWhiteColor inline-flex items-center gap-1 px-4 py-1.5 rounded-lg font-semibold uppercase text-sm cursor-default 
+                  className="bg-secondaryColor text-primaryWhiteColor inline-flex items-center gap-1 px-4 py-1.5 rounded-full font-semibold uppercase text-sm cursor-default 
                 border border-transparent"
                 >
                   <GiGraduateCap size={18} aria-hidden="true" />
@@ -87,7 +87,7 @@ const Academic = () => {
                   target="_blank"
                   rel="noopener"
                   href="https://www.cardiffmet.ac.uk/"
-                  className="bg-secondaryColor text-primaryWhiteColor inline-flex items-center gap-1 px-4 py-1.5 rounded-lg font-semibold uppercase text-sm cursor-default 
+                  className="bg-secondaryColor text-primaryWhiteColor inline-flex items-center gap-1 px-4 py-1.5 rounded-full font-semibold uppercase text-sm cursor-default 
                 border border-transparent"
                 >
                   <IoMedalOutline size={18} aria-hidden="true" />

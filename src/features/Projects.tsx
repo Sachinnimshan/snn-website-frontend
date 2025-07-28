@@ -4,6 +4,7 @@ import PageWrapper from "../components/pagewrapper/PageWrapper";
 import type { Project } from "../types/projects";
 import { motion } from "framer-motion";
 import { FaGithub, FaYoutube, FaGlobe } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -16,6 +17,7 @@ const cardVariants = {
 
 export default function Projects() {
   const { data: projects, isLoading } = useGetProjectListQuery(undefined);
+  const navigate = useNavigate();
 
   return (
     <PageWrapper title="Personal Projects" description="Explore my projects">
@@ -31,6 +33,7 @@ export default function Projects() {
               initial="hidden"
               animate="visible"
               variants={cardVariants}
+              onClick={() => navigate(`/projects/${project._id}`)}
             >
               {project.image && (
                 <img
@@ -53,7 +56,7 @@ export default function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 px-3 py-1 text-sm rounded-lg border-2 border-green-500 text-green-500 dark:border-green-600 hover:bg-green-100 dark:hover:bg-gray-700 transition"
+                    className="flex items-center gap-1 px-3 py-1 text-sm rounded-full border-2 border-green-500 text-green-500 dark:border-green-600 hover:bg-green-100 dark:hover:bg-gray-700 transition"
                   >
                     <FaGithub size={16} />
                     GitHub
@@ -64,7 +67,7 @@ export default function Projects() {
                     href={project.youtube}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 px-3 py-1 text-sm rounded-lg border-2 border-red-400 text-red-500 hover:bg-red-50 dark:hover:bg-gray-700 transition"
+                    className="flex items-center gap-1 px-3 py-1 text-sm rounded-full border-2 border-red-400 text-red-500 hover:bg-red-50 dark:hover:bg-gray-700 transition"
                   >
                     <FaYoutube size={16} />
                     YouTube
@@ -75,7 +78,7 @@ export default function Projects() {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 px-3 py-1 text-sm rounded-lg border-2 border-blue-400 text-blue-500 hover:bg-blue-50 dark:hover:bg-gray-700 transition"
+                    className="flex items-center gap-1 px-3 py-1 text-sm rounded-full border-2 border-blue-400 text-blue-500 hover:bg-blue-50 dark:hover:bg-gray-700 transition"
                   >
                     <FaGlobe size={16} />
                     Live

@@ -8,6 +8,7 @@ import Contact from "./features/Contact";
 import Experience from "./features/Experience";
 import Academic from "./features/Academic";
 import Certifications from "./features/Certifications";
+import ProjectDetails from "./features/ProjectDetails";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="projects" element={<Projects />} />
+        <Route path="projects/:id" element={<ProjectDetails />} />
         <Route path="experience" element={<Experience />} />
         <Route path="skills" element={<Skills />} />
         <Route path="academic" element={<Academic />} />

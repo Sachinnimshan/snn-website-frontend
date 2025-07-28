@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 interface PageWrapperProps {
   title?: string;
@@ -13,6 +13,11 @@ export default function PageWrapper({
   background,
   children,
 }: PageWrapperProps) {
+  useEffect(() => {
+    document.title = title
+      ? `${title} - Sachin Nimshan`
+      : "Sachin Nimshan - Offical website";
+  }, [title]);
   return (
     <div
       className={`w-full pt-24 pb-12 px-4 sm:px-6 min-h-screen bg-secondaryBgColor ${background}`}
@@ -27,6 +32,7 @@ export default function PageWrapper({
             <div className="mx-auto mt-4 mb-4 w-10 h-1 bg-secondaryColor rounded"></div>
           </>
         )}
+        {description && <meta name="description" content={description} />}
         {description && (
           <p className="text-sm sm:text-xl font-regular text-primaryTextColor mb-8 text-center">
             {description}

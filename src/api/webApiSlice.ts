@@ -22,6 +22,12 @@ export const webApiSlice = createApi({
                 method: HTTP_VERBS.GET,
             }),
         }),
+        getProjectDetails: builder.query<Project, string>({
+            query: (id) => ({
+                url: `/projects/${id}`,
+                method: HTTP_VERBS.GET,
+            }),
+        }),
         getExperienceList: builder.query<Experience[], void>({
             query: () => ({
                 url: '/experience',
@@ -44,4 +50,4 @@ export const webApiSlice = createApi({
     }),
 });
 
-export const { useGetProjectListQuery, useGetExperienceListQuery, useGetAcademicListQuery, usePostContactMutation } = webApiSlice;
+export const { useGetProjectListQuery, useGetProjectDetailsQuery, useGetExperienceListQuery, useGetAcademicListQuery, usePostContactMutation } = webApiSlice;
