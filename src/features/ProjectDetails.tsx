@@ -53,7 +53,7 @@ const ProjectDetails = () => {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-5 py-2 rounded-md border-2 border-green-500 dark:border-gray-300 text-green-600 dark:text-white hover:bg-green-100 dark:hover:bg-gray-700 transition font-semibold"
+                className="flex items-center gap-2 px-5 py-2 rounded-md border-2 border-green-700 dark:border-gray-300 text-green-700 dark:text-white hover:bg-green-100 dark:hover:bg-gray-700 transition font-semibold"
               >
                 <FaGithub size={20} />
                 GitHub
