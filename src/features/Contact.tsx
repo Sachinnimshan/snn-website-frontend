@@ -146,7 +146,7 @@ const Contact = () => {
           </div>
           <button
             type="submit"
-            className="bg-secondaryColor text-primaryWhiteColor font-semibold py-2 px-6 rounded-md transition"
+            className="bg-secondaryColor text-primaryWhiteColor font-semibold py-2 px-6 rounded-md transition uppercase"
           >
             Send Message
           </button>

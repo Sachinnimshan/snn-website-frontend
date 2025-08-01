@@ -45,6 +45,7 @@ const Skills = () => (
             transition-colors cursor-pointer
             min-w-[130px] sm:min-w-[155px] md:min-w-[180px]
             justify-center
+            border-primaryWhiteColor
           "
           variants={chipVariants}
           whileHover={{ scale: 1.05 }}

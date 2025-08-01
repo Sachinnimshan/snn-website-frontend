@@ -23,25 +23,15 @@ const ThemeToggle = () => {
   };
 
   return (
-    <button
-      onClick={toggleColor}
-      aria-label="Toggle secondary color"
-      className="
-  fixed right-0 top-1/3
-  flex items-center justify-center
-  w-12 h-12
-  rounded-l-lg
-  shadow-lg
-  transition-colors duration-300 ease-in-out
-  focus:shadow-outline
-  text-white
-  cursor-pointer
-  bg-secondaryColor
-  z-[3000]
-"
-    >
-      <MdOutlinePalette size={24} aria-hidden="true" />
-    </button>
+    <div className="p-3 bg-white rounded-l-lg shadow-lg fixed top-1/3 right-0 z-[3000]">
+      <button
+        onClick={toggleColor}
+        aria-label="Toggle secondary color"
+        className="flex items-center justify-center w-12 h-12 rounded-lg shadow-lg transition-colors duration-300 ease-in-out focus:shadow-outline text-white cursor-pointer bg-secondaryColor"
+      >
+        <MdOutlinePalette size={24} aria-hidden="true" />
+      </button>
+    </div>
   );
 };
 
