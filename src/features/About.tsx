@@ -18,7 +18,7 @@ export default function About() {
         <div className="mx-auto text-secondaryTextColor dark:text-gray-200 space-y-6 leading-relaxed font-medium text-base sm:text-lg md:text-lg text-justify">
           <p>
             I am a{" "}
-            <span className="font-medium text-secondaryColor">
+            <span className="font-medium text-secondaryTextColor font-semibold">
               {experiences
                 ? experiences[experiences.length - 1]?.jobTitle
                 : "Software Engineer"}
@@ -26,7 +26,7 @@ export default function About() {
             deeply passionate about React development, frontend technologies,
             and delivering clean, intuitive UI/UX experiences. I hold a
             Second-Class
-            <span className="text-secondaryColor font-medium">
+            <span className="text-secondaryTextColor font-semibold">
               {" "}
               {academics
                 ? academics[0]?.title
@@ -103,15 +103,15 @@ export default function About() {
 
           <p>
             Outside of tech, I enjoy{" "}
-            <span className="text-secondaryColor font-medium">
+            <span className="text-secondaryTextColor font-semibold">
               fish keeping
             </span>
             ,{" "}
-            <span className="text-secondaryColor font-medium">
+            <span className="text-secondaryTextColor font-semibold">
               watching cricket
             </span>
             , and I'm proudly a{" "}
-            <span className="text-secondaryColor font-medium">dog person</span>.
+            <span className="text-secondaryTextColor font-semibold">dog person</span>.
             I also like working on personal side projects that fuse technology
             with creativity.
           </p>
