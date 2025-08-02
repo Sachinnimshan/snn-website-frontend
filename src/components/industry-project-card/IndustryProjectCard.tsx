@@ -37,7 +37,7 @@ const IndustryProjectCard = ({ project, i }: IndustryProjectCardProps) => {
       <h3 className="text-xl font-semibold text-primaryTextColor mb-2">
         {project.title}
       </h3>
-      <p className="text-sm text-secondaryColor mb-1 font-semibold">
+      <p className="text-sm text-secondaryColor mb-1 font-semibold uppercase">
         {project.client}
       </p>
       <p className="text-secondaryTextColor text-sm mb-3">{project.period}</p>

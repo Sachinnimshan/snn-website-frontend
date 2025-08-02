@@ -14,13 +14,13 @@ export default function Projects() {
 
   return (
     <PageWrapper
-      title={showCommercial ? "Commercial Projects" : "Personal Projects"}
+      title={`${showCommercial ? "Commercial" : "Personal"} Projects`}
       description="Explore my projects"
     >
       <ProjectsToggle
         options={[
-          { label: "Commercial Projects", value: true },
-          { label: "Personal Projects", value: false },
+          { label: "Commercial", value: true },
+          { label: "Personal", value: false },
         ]}
         selectedValue={showCommercial}
         onChange={setShowCommercial}
