@@ -30,7 +30,7 @@ const IndustryProjectCard = ({ project, i }: IndustryProjectCardProps) => {
       role="article"
       aria-label={`${project.title} commercial project`}
     >
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center justify-between mb-2">
         <div>
           <h3 className="text-xl font-semibold text-primaryTextColor">
             {project.title}

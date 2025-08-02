@@ -31,7 +31,7 @@ const IotProjectCard: React.FC<IotProjectProps> = ({ project, index }) => {
       <h3 className="text-xl font-semibold text-primaryTextColor mb-1">
         {project.title}
       </h3>
-      <p className="text-secondaryTextColor text-sm mb-3 font-medium italic">
+      <p className="text-secondaryTextColor text-sm mb-3 font-medium">
         {project.period}
       </p>
 

@@ -13,7 +13,7 @@ export const iotProjects: IoTProject[] = [
     {
         id: 1,
         title: "Smart Pond Motor & Light Automation System",
-        period: "Personal Project / Home Automation",
+        period: "June 2025 - Present",
         description:
             "Built a smart control system to manage pond filter and lighting using ESP32 microcontroller. Developed a React web app to control the pond motor remotely, optimizing power usage by running it only when needed. Automated pond lights for nighttime use and scheduled motor operation to save electricity. Used Firebase Realtime Database to sync device states with the cloud for live mobile and web control.",
         technologies: [
