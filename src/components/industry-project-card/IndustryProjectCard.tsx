@@ -1,6 +1,8 @@
 // src/components/industryProjectCard/IndustryProjectCard.tsx
 import { motion } from "framer-motion";
 import type { CommercialProject } from "../../configs/industryProjects";
+import { FaExternalLinkAlt } from "react-icons/fa";
+import truncateText from "../../utils/truncateText";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -14,12 +16,6 @@ const cardVariants = {
 interface IndustryProjectCardProps {
   project: CommercialProject;
   i: number;
-}
-
-function truncateText(text: string) {
-  if (!text) return "";
-  if (text.length <= 150) return text;
-  return text.slice(0, 150) + "...";
 }
 
 const IndustryProjectCard = ({ project, i }: IndustryProjectCardProps) => {
@@ -39,9 +35,16 @@ const IndustryProjectCard = ({ project, i }: IndustryProjectCardProps) => {
           <h3 className="text-xl font-semibold text-primaryTextColor">
             {project.title}
           </h3>
-          <p className="text-sm text-secondaryColor font-semibold uppercase mt-1">
-            {project.client}
-          </p>
+          <a
+            href={project.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-secondaryColor font-semibold uppercase mt-1"
+          >
+            <span className="inline-flex items-center gap-2">
+              {project.client} <FaExternalLinkAlt className="w-3.5 h-3.5" />
+            </span>
+          </a>
         </div>
         {project.image && (
           <img
@@ -55,7 +58,7 @@ const IndustryProjectCard = ({ project, i }: IndustryProjectCardProps) => {
 
       <p className="text-secondaryTextColor text-sm mb-3">{project.period}</p>
       <p className="text-secondaryTextColor text-base leading-relaxed flex-grow mb-4">
-        {truncateText(project.description)}
+        {truncateText(project.description, 275)}
       </p>
       <div className="flex flex-wrap gap-2 mt-auto">
         {project.technologies.map((tech) => (

@@ -41,7 +41,9 @@ export default function Home() {
               View Projects
             </Link>
             <a
-              href="/Sachin_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://drive.google.com/file/d/1QIXuvfhIHMChaDn__nbjb1fJPLYr2PUi/view?usp=sharing"
               download
               className="border-2 border-secondaryColor text-secondaryColor rounded-lg px-4 py-2.5 transition flex items-center justify-center gap-2 w-full sm:w-auto"
             >

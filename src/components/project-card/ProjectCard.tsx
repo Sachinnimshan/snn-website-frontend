@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { FaGithub, FaYoutube, FaGlobe } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import type { Project } from "../../types/projects";
+import truncateText from "../../utils/truncateText";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -11,12 +12,6 @@ const cardVariants = {
     transition: { delay: i * 0.1 },
   }),
 };
-
-function truncateText(text: string) {
-  if (!text) return "";
-  if (text.length <= 150) return text;
-  return text.slice(0, 150) + "...";
-}
 
 interface ProjectCardProps {
   project: Project;
