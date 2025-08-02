@@ -1,6 +1,6 @@
-import PageWrapper from "../components/pagewrapper/PageWrapper";
+import PageWrapper from "../components/page-wrapper/PageWrapper";
 import { certifications } from "../configs/certifications";
-import CertificationCard from "../components/certificationcard/CertificationCard";
+import CertificationCard from "../components/certification-card/CertificationCard";
 
 const Certifications = () => {
   return (

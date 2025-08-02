@@ -1,5 +1,5 @@
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
-import PageWrapper from "../components/pagewrapper/PageWrapper";
+import PageWrapper from "../components/page-wrapper/PageWrapper";
 import { useState } from "react";
 import { usePostContactMutation } from "../api/webApiSlice";
 import { personalInfo } from "../configs/common";

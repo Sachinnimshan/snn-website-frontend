@@ -1,4 +1,4 @@
-import PageWrapper from "../components/pagewrapper/PageWrapper";
+import PageWrapper from "../components/page-wrapper/PageWrapper";
 import { skills } from "../configs/skills";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";

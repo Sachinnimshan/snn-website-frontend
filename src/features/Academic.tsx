@@ -1,5 +1,5 @@
 import { useGetAcademicListQuery } from "../api/webApiSlice";
-import PageWrapper from "../components/pagewrapper/PageWrapper";
+import PageWrapper from "../components/page-wrapper/PageWrapper";
 import { FaGraduationCap } from "react-icons/fa";
 import "react-vertical-timeline-component/style.min.css";
 import {

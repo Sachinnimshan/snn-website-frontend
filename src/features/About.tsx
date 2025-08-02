@@ -3,7 +3,7 @@ import {
   useGetExperienceListQuery,
 } from "../api/webApiSlice";
 import Loader from "../components/loader/Loader";
-import PageWrapper from "../components/pagewrapper/PageWrapper";
+import PageWrapper from "../components/page-wrapper/PageWrapper";
 
 export default function About() {
   const { data: academics, isLoading: academicsLoading } =

@@ -29,7 +29,7 @@ export default function Home() {
             <span className="block sm:inline"> {personalInfo.subtitle}</span>
           </h2>
 
-          <p className="mt-3 sm:mt-4 text-gray-600 text-base sm:text-base md:text-lg leading-relaxed max-w-xl sm:max-w-5xl">
+          <p className="mt-3 sm:mt-4 text-gray-600 text-base sm:text-base md:text-xl leading-relaxed max-w-xl sm:max-w-5xl">
             {personalInfo.description}
           </p>
 

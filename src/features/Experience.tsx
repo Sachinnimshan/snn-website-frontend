@@ -1,5 +1,5 @@
 import { useGetExperienceListQuery } from "../api/webApiSlice";
-import PageWrapper from "../components/pagewrapper/PageWrapper";
+import PageWrapper from "../components/page-wrapper/PageWrapper";
 import { FaBriefcase } from "react-icons/fa";
 import {
   VerticalTimeline,

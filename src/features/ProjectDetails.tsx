@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useGetProjectDetailsQuery } from "../api/webApiSlice";
-import PageWrapper from "../components/pagewrapper/PageWrapper";
+import PageWrapper from "../components/page-wrapper/PageWrapper";
 import Loader from "../components/loader/Loader";
 import { FaGithub, FaYoutube, FaGlobe } from "react-icons/fa";
 
