@@ -34,12 +34,25 @@ const IndustryProjectCard = ({ project, i }: IndustryProjectCardProps) => {
       role="article"
       aria-label={`${project.title} commercial project`}
     >
-      <h3 className="text-xl font-semibold text-primaryTextColor mb-2">
-        {project.title}
-      </h3>
-      <p className="text-sm text-secondaryColor mb-1 font-semibold uppercase">
-        {project.client}
-      </p>
+      <div className="flex items-center justify-between mb-4">
+        <div>
+          <h3 className="text-xl font-semibold text-primaryTextColor">
+            {project.title}
+          </h3>
+          <p className="text-sm text-secondaryColor font-semibold uppercase mt-1">
+            {project.client}
+          </p>
+        </div>
+        {project.image && (
+          <img
+            src={project.image}
+            alt={`${project.title} logo`}
+            className="w-16 h-16 object-contain rounded-md"
+            loading="lazy"
+          />
+        )}
+      </div>
+
       <p className="text-secondaryTextColor text-sm mb-3">{project.period}</p>
       <p className="text-secondaryTextColor text-base leading-relaxed flex-grow mb-4">
         {truncateText(project.description)}

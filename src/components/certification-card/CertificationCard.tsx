@@ -22,7 +22,7 @@ const CertificationCard = ({ certificate, idx }: CertificationCardProps) => {
           <h2 className="text-xl font-semibold text-primaryTextColor mb-1">
             {certificate.title}
           </h2>
-          <p className="text-base font-semibold text-secondaryColor uppercase">
+          <p className="text-sm font-semibold text-secondaryColor uppercase">
             {certificate.issuer}
           </p>
           <p className="text-sm text-thirdTextColor font-medium mb-2 mt-1 uppercase">

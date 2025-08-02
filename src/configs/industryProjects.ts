@@ -7,6 +7,8 @@ export interface CommercialProject {
     period: string;
     description: string;
     technologies: string[];
+    image?: string;
+    website?: string; // Optional website URL
 }
 
 export const commercialProjects: CommercialProject[] = [
@@ -28,6 +30,8 @@ export const commercialProjects: CommercialProject[] = [
             "Azure",
             ".NET APIs",
         ],
+        image: '/projects/iris.png',
+        website: 'https://www.irisglobal.com/products/accounting-document-management/'
     },
     {
         id: 2,
@@ -44,6 +48,8 @@ export const commercialProjects: CommercialProject[] = [
             "Node.js",
             "Jest",
         ],
+        image: '/projects/circles-life.svg',
+        website: 'https://www.circles.life/sg/',
     },
     {
         id: 3,
@@ -62,6 +68,8 @@ export const commercialProjects: CommercialProject[] = [
             "Azure DevOps",
             "CI/CD",
         ],
+        image: '/projects/circles-life.svg',
+        website: 'https://www.circles.life/sg/',
     },
     {
         id: 4,
@@ -81,6 +89,8 @@ export const commercialProjects: CommercialProject[] = [
             "Datadog",
             "Azure CI/CD",
         ],
+        image: '/projects/spades.jpeg',
+        website: 'https://www.linkedin.com/company/spadesapp/'
     },
 
 ];
