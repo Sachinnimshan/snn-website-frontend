@@ -1,8 +1,8 @@
 import { AiOutlineCopyright } from "react-icons/ai";
+import { personalInfo } from "../../configs/common";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const name = "Sachin Nimshan";
 
   return (
     <footer
@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="flex items-center justify-center gap-2">
         <AiOutlineCopyright size={16} />
         <span className="text-gray-400">{currentYear}</span>
-        <span className="font-signature">{name}</span>
+        <span className="font-signature">{personalInfo.name}</span>
         <span className="text-gray-400">All rights reserved.</span>
       </div>
     </footer>

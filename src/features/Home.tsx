@@ -1,6 +1,7 @@
 import { FaDownload } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { personalInfo } from "../configs/common";
 
 export default function Home() {
   return (
@@ -18,24 +19,18 @@ export default function Home() {
           transition={{ delay: 0.3, duration: 0.8 }}
         >
           <h1 className="text-5xl sm:text-2xl md:text-6xl font-bold leading-tight text-primaryTextColor uppercase drop-shadow-lg tracking-wider">
-            Hey, I'm Sachin Nimshan
+            Hey, I'm {personalInfo.name}
           </h1>
           <h2 className="text-lg sm:text-2xl md:text-3xl font-semibold mt-2 sm:mt-5 text-gray-700 drop-shadow-md">
             <span className="text-secondaryColor drop-shadow-xs uppercase">
-              Frontend Engineer
+              {personalInfo.title}
             </span>
             <br className="block sm:hidden" />
-            <span className="block sm:inline">
-              {" "}
-              ( React | TypeScript | UI/UX )
-            </span>
+            <span className="block sm:inline"> {personalInfo.subtitle}</span>
           </h2>
 
           <p className="mt-3 sm:mt-4 text-gray-600 text-base sm:text-base md:text-lg leading-relaxed max-w-xl sm:max-w-5xl">
-            Passionate software engineer building modern, intuitive, and
-            scalable web apps. Expert in React, TypeScript, and clean UI
-            development. Dedicated to delivering smooth, high-performance user
-            experiences.
+            {personalInfo.description}
           </p>
 
           <div className="mt-5 sm:mt-6 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 w-full font-semibold uppercase">

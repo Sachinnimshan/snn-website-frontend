@@ -2,13 +2,13 @@ import { Routes, Route } from "react-router-dom";
 import MainLayout from "./components/layouts/MainLayout";
 import Home from "./features/Home";
 import About from "./features/About";
-import Projects from "./features/Projects";
 import Skills from "./features/Skills";
 import Contact from "./features/Contact";
 import Experience from "./features/Experience";
 import Academic from "./features/Academic";
 import Certifications from "./features/Certifications";
 import ProjectDetails from "./features/ProjectDetails";
+import Projects from "./features/Projects";
 
 function App() {
   return (

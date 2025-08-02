@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { HiMenuAlt3 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
-import { navLinks } from "./navLinks";
+import { navLinks } from "../../configs/navLinks";
+import { personalInfo } from "../../configs/common";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,7 +26,7 @@ const Header = () => {
           to="/"
           className="text-xl sm:text-2xl md:text-3xl font-bold text-primaryTextColor font-signature tracking-wide"
         >
-          Sachin Nimshan
+          {personalInfo.name}
         </Link>
 
         {/* Desktop Nav */}

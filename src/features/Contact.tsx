@@ -1,15 +1,8 @@
-import {
-  FaEnvelope,
-  FaMapMarkerAlt,
-  FaPhoneAlt,
-  FaLinkedin,
-  FaGithub,
-  FaFacebook,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import PageWrapper from "../components/pagewrapper/PageWrapper";
 import { useState } from "react";
 import { usePostContactMutation } from "../api/webApiSlice";
+import { personalInfo } from "../configs/common";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -49,54 +42,34 @@ const Contact = () => {
         <div className="space-y-6">
           <div className="flex items-center gap-4 bg-primaryWhiteColor p-5 rounded-lg shadow-lg text-base text-secondaryTextColor font-medium">
             <FaEnvelope className="text-secondaryTextColor w-6 h-6" />
-            <span>sachinnimshan@gmail.com</span>
+            <span>{personalInfo.email}</span>
           </div>
           <div className="flex items-center gap-4 bg-primaryWhiteColor p-5 rounded-lg border shadow-lg text-base text-secondaryTextColor font-medium">
             <FaPhoneAlt className="text-secondaryTextColor w-6 h-6" />
-            <span>+94 77 9012 655</span>
+            <span>{personalInfo.phone}</span>
           </div>
           <div className="flex items-center gap-4 bg-primaryWhiteColor p-5 rounded-lg shadow-lg text-base text-secondaryTextColor font-medium">
             <FaMapMarkerAlt className="text-secondaryTextColor w-6 h-6" />
-            <span>Walasmulla, Sri Lanka</span>
+            <span>{personalInfo.location}</span>
           </div>
 
           <div className="flex gap-6 mt-6  justify-center md:hidden">
-            <a
-              href="https://linkedin.com/in/sachin-nimshan"
-              target="_blank"
-              rel="noopener"
-              title="LinkedIn Profile"
-              className="text-primaryTextColor hover:text-secondaryColor transition"
-            >
-              <FaGithub className="w-6 h-6" />
-            </a>
-            <a
-              href="https://github.com/your-username"
-              target="_blank"
-              rel="noopener"
-              title="GitHub Profile"
-              className="text-primaryTextColor hover:text-secondaryColor transition"
-            >
-              <FaLinkedin className="w-6 h-6" />
-            </a>
-            <a
-              href="https://linkedin.com/in/sachin-nimshan"
-              target="_blank"
-              rel="noopener"
-              title="LinkedIn Profile"
-              className="text-primaryTextColor hover:text-secondaryColor transition"
-            >
-              <FaFacebook className="w-6 h-6" />
-            </a>
-            <a
-              href="https://linkedin.com/in/sachin-nimshan"
-              target="_blank"
-              rel="noopener"
-              title="LinkedIn Profile"
-              className="text-primaryTextColor hover:text-secondaryColor transition"
-            >
-              <FaYoutube className="w-6 h-6" />
-            </a>
+            {personalInfo?.socialMediaLinks?.map((link, index) => {
+              const Icon = link.icon;
+
+              return (
+                <a
+                  key={index}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primaryTextColor rounded-full hover:text-secondaryColor hover:border-secondaryColor transition p-2"
+                  aria-label={`Link to ${link.url}`}
+                >
+                  <Icon className="w-8 h-8" />
+                </a>
+              );
+            })}
           </div>
         </div>
 
