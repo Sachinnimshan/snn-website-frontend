@@ -17,10 +17,10 @@ function ProjectsToggle<T extends string>({
         <button
           key={label}
           type="button"
-          className={`px-6 py-2 rounded-lg font-semibold uppercase transition border-2 border-secondaryColor ${
+          className={`px-6 py-2 rounded-lg font-semibold uppercase transition border-2 border-transparent ${
             selectedValue === value
               ? "bg-secondaryColor text-primaryWhiteColor shadow-lg"
-              : "bg-secondaryBgColor text-secondaryColor hover:border-secondaryColor hover:text-secondaryColor"
+              : "bg-contentBgColor text-thirdTextColor hover:border-secondaryColor hover:text-secondaryColor"
           }`}
           onClick={() => onChange(value)}
           aria-label={`Show ${label.toLowerCase()}`}

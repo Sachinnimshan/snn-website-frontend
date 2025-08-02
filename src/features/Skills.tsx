@@ -41,11 +41,12 @@ const Skills = () => (
             flex items-center gap-2 sm:gap-3
             border-2 p-3 sm:p-4 md:p-5
             rounded-lg
-            hover:border-secondaryColor
+            hover:border-secondaryColor hover:text-secondaryColor
             transition-colors cursor-pointer
             min-w-[130px] sm:min-w-[155px] md:min-w-[180px]
             justify-center
             border-primaryWhiteColor
+            text-thirdTextColor
           "
           variants={chipVariants}
           whileHover={{ scale: 1.05 }}
@@ -56,7 +57,7 @@ const Skills = () => (
             size={22}
             style={{ minWidth: 22, minHeight: 22 }}
           />
-          <span className="text-thirdTextColor text-xs sm:text-sm md:text-base font-semibold">
+          <span className=" text-xs sm:text-sm md:text-base font-semibold uppercase">
             {name}
           </span>
         </motion.div>

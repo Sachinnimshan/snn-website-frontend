@@ -15,6 +15,7 @@ export const THEME_COLORS = {
     THEME_TEAL: "#008080",
     THEME_GREEN: "#80b918",
     THEME_KAWASAKI: "#66cc33",
+    THEME_KEELLS: "#64bf47",
     THEME_PURPLE: "#7843e9",
     THEME_PINK: "#ff007f",
     THEME_RED: "#DC143C",

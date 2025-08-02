@@ -23,7 +23,7 @@ const ThemeToggle = () => {
   };
 
   return (
-    <div className="p-3 bg-white rounded-l-lg shadow-lg fixed top-1/3 right-0 z-[3000]">
+    <div className="p-2 bg-white rounded-l-lg shadow-lg fixed top-1/3 right-0 z-[3000]">
       <button
         onClick={toggleColor}
         aria-label="Toggle secondary color"

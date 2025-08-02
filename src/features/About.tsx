@@ -111,8 +111,10 @@ export default function About() {
               watching cricket
             </span>
             , and I'm proudly a{" "}
-            <span className="text-secondaryTextColor font-semibold">dog person</span>.
-            I also like working on personal side projects that fuse technology
+            <span className="text-secondaryTextColor font-semibold">
+              dog person
+            </span>
+            . I also like working on personal side projects that fuse technology
             with creativity.
           </p>
         </div>

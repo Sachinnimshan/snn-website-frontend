@@ -28,7 +28,7 @@ const Experience = () => {
       ) : (
         <VerticalTimeline lineColor={APP_COLORS.PRIMARY_WHITE_COLOR}>
           {experiences
-            ?.slice() // Create a shallow copy to avoid mutating the original data
+            ?.slice()
             .sort(
               (a, b) =>
                 new Date(b.start).getTime() - new Date(a.start).getTime() // Sort descending (latest first)
@@ -53,7 +53,7 @@ const Experience = () => {
                   background: selectedColor,
                   color: APP_COLORS.PRIMARY_WHITE_COLOR,
                   opacity: item.current ? 1 : 0.5,
-                }} // yellow-400
+                }}
                 icon={<FaBriefcase />}
                 contentStyle={{
                   background: APP_COLORS.CONTENT_BACKGROUND_COLOR,
@@ -61,6 +61,8 @@ const Experience = () => {
                   borderTop: item.current
                     ? `0.5rem solid ${selectedColor}`
                     : "none",
+                  borderRadius: "12px",
+                  padding: "1.5rem 2rem",
                 }}
                 contentArrowStyle={{
                   borderRight: `5px solid ${APP_COLORS.CONTENT_BACKGROUND_COLOR}`,

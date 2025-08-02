@@ -3,6 +3,7 @@ import PageWrapper from "../components/page-wrapper/PageWrapper";
 import { useState } from "react";
 import { usePostContactMutation } from "../api/webApiSlice";
 import { personalInfo } from "../configs/common";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -25,10 +26,10 @@ const Contact = () => {
     try {
       await postContact(formData).unwrap();
       setFormData({ name: "", email: "", message: "" });
-      // Optionally, show a success toast or message
+      toast.success("Message sent successfully!"); // <-- success toast
     } catch (error) {
       console.error("Error sending message", error);
-      // Optionally, show an error toast or message
+      toast.error("Failed to send message. Please try again."); // <-- error toast
     }
   };
   return (

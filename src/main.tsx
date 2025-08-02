@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import { store, persistor } from "./store/store.ts";
 import ThemeUpdater from "./components/theme/ThemeUpdater.tsx";
 import { PersistGate } from "redux-persist/integration/react";
+import { ToastContainer } from "react-toastify";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -15,6 +16,17 @@ createRoot(document.getElementById("root")!).render(
         <PersistGate loading={null} persistor={persistor}>
           <ThemeUpdater>
             <App />
+            <ToastContainer
+              position="top-right"
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop
+              closeOnClick
+              pauseOnHover
+              draggable
+              pauseOnFocusLoss
+              theme="colored" // or "light" or "dark"
+            />
           </ThemeUpdater>
         </PersistGate>
       </Provider>
