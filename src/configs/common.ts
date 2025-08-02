@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaFacebook, FaYoutube } from "react-icons/fa";
 export const personalInfo = {
     name: "Sachin Nimshan",
     title: "Frontend Engineer",
-    subtitle: "React | TypeScript | UI/UX",
+    subtitle: "( React | TypeScript | UI/UX )",
     description:
         "Passionate software engineer building modern, intuitive, and scalable web apps. Expert in React, TypeScript, and clean UI development. Dedicated to delivering smooth, high-performance user experiences.",
     email: "sachinnimshan@gmail.com",
