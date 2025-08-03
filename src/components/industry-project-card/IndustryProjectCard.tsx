@@ -1,8 +1,7 @@
-// src/components/industryProjectCard/IndustryProjectCard.tsx
 import { motion } from "framer-motion";
 import type { CommercialProject } from "../../configs/industryProjects";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import truncateText from "../../utils/truncateText";
+import { IoMdArrowDropright } from "react-icons/io";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -39,9 +38,9 @@ const IndustryProjectCard = ({ project, i }: IndustryProjectCardProps) => {
             href={project.website}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-secondaryColor font-semibold uppercase mt-1"
+            className="text-base text-secondaryColor font-semibold uppercase mt-1"
           >
-            <span className="inline-flex items-center gap-2">
+            <span className="inline-flex items-center gap-2 mt-2">
               {project.client} <FaExternalLinkAlt className="w-3.5 h-3.5" />
             </span>
           </a>
@@ -57,9 +56,17 @@ const IndustryProjectCard = ({ project, i }: IndustryProjectCardProps) => {
       </div>
 
       <p className="text-secondaryTextColor text-sm mb-3">{project.period}</p>
-      <p className="text-secondaryTextColor text-base leading-relaxed flex-grow mb-4">
-        {truncateText(project.description, 275)}
-      </p>
+
+      {/* Tasks list with icon bullets */}
+      <ul className="text-secondaryTextColor text-base leading-relaxed flex-grow mb-4 space-y-2">
+        {project.tasks.map((task, idx) => (
+          <li key={idx} className="flex items-start gap-2">
+            <IoMdArrowDropright className="mt-1 min-w-[1.25rem] text-secondaryColor flex-shrink-0" />
+            <span>{task}</span>
+          </li>
+        ))}
+      </ul>
+
       <div className="flex flex-wrap gap-2 mt-auto">
         {project.technologies.map((tech) => (
           <span

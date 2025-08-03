@@ -5,7 +5,7 @@ export interface CommercialProject {
     title: string;
     client: string;
     period: string;
-    description: string;
+    tasks: string[];
     technologies: string[];
     image?: string;
     website?: string; // Optional website URL
@@ -17,8 +17,11 @@ export const commercialProjects: CommercialProject[] = [
         title: "IFM - DMS, IRIS Capital Ltd - Tax Document Management System",
         client: "IRIS Capital Ltd",
         period: "February 2025 - present",
-        description:
-            "Led the development of a scalable web platform focused on frontend performance and usability. Built responsive UIs in React and TypeScript, integrated with .NET APIs, implemented design systems, reusable components, and optimized app performance. Managed CI/CD and deployments on Azure, collaborating across teams.",
+        tasks: [
+            "Led the development of a scalable web platform focused on frontend performance and usability.",
+            "Built responsive UIs in React and TypeScript, integrated with .NET APIs, implemented design systems, reusable components, and optimized app performance.",
+            "Managed CI/CD and deployments on Azure, collaborating across teams.",
+        ],
         technologies: [
             "React",
             "TypeScript",
@@ -38,8 +41,11 @@ export const commercialProjects: CommercialProject[] = [
         title: "Operator X, Circles Life - Telco SAAS Platform",
         client: "Circles Life, Singapore",
         period: "January 2024 - May 2024",
-        description:
-            "Developed a company-based dashboard from end to end for Onic, a digital product in Singapore. Focused on UI design, state management, and backend integration for a seamless experience. Built the frontend using React, Next.js, and TypeScript, styled with Ant Design, and integrated backend logic with Node.js.",
+        tasks: [
+            "Developed a company-based dashboard from end to end for Onic, a digital product in Singapore.",
+            "Focused on UI design, state management, and backend integration for a seamless experience.",
+            "Built the frontend using React, Next.js, and TypeScript, styled with Ant Design, and integrated backend logic with Node.js.",
+        ],
         technologies: [
             "React",
             "Next.js",
@@ -56,8 +62,12 @@ export const commercialProjects: CommercialProject[] = [
         title: "Annapurana Customer X, Circles Life - Telco SAAS Platform",
         client: "Circles Life, Singapore",
         period: "August 2023 - January 2024",
-        description:
-            "Rewrote and modernized a complex legacy codebase for a major telco SaaS client. Modularized architecture, improved maintainability, and optimized frontend performance. Enhanced both customer and operator portals with improved UI workflows and streamlined UX. Delivered milestones enabling faster feature rollouts.",
+        tasks: [
+            "Rewrote and modernized a complex legacy codebase for a major telco SaaS client.",
+            "Modularized architecture, improved maintainability, and optimized frontend performance.",
+            "Enhanced both customer and operator portals with improved UI workflows and streamlined UX.",
+            "Delivered milestones enabling faster feature rollouts.",
+        ],
         technologies: [
             "React",
             "TypeScript",
@@ -76,8 +86,12 @@ export const commercialProjects: CommercialProject[] = [
         title: "Spades App, Spades – POS Integrated Restaurant Service Platform",
         client: "Spades App, UAE",
         period: "February 2022 - December 2022",
-        description:
-            "Developed the restaurant ordering and payment module with React SPA and integrated with payment gateways. Built a reusable design system and component library using React and Material-UI. Enhanced SEO and initial load performance with a customer-facing web app using Next.js. Implemented analytics for better product decisions.",
+        tasks: [
+            "Developed the restaurant ordering and payment module with React SPA and integrated with payment gateways.",
+            "Built a reusable design system and component library using React and Material-UI.",
+            "Enhanced SEO and initial load performance with a customer-facing web app using Next.js.",
+            "Implemented analytics for better product decisions.",
+        ],
         technologies: [
             "React",
             "Next.js",
@@ -92,5 +106,5 @@ export const commercialProjects: CommercialProject[] = [
         image: '/projects/spades.jpeg',
         website: 'https://www.linkedin.com/company/spadesapp/'
     },
-
 ];
+

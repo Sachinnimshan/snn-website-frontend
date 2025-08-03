@@ -12,7 +12,7 @@ function ProjectsToggle<T extends string>({
   onChange,
 }: ProjectsToggleProps<T>) {
   return (
-    <div className="flex justify-center mb-6 space-x-2">
+    <div className="flex flex-wrap gap-2 justify-center mb-6 px-4">
       {options.map(({ label, value }) => (
         <button
           key={label}
