@@ -12,11 +12,11 @@ import IotProjectCard from "../components/iot-card/IotProjectCard";
 import { iotProjects } from "../configs/iot";
 
 export default function Projects() {
-  const { data: personalProjects, isLoading: isLoadingProjects } =
-    useGetProjectListQuery(undefined);
   const [projectCategory, setProjectCategory] = useState<
     "commercial" | "personal" | "iot"
   >("commercial");
+  const { data: personalProjects, isLoading: isLoadingProjects } =
+    useGetProjectListQuery(undefined);
   const { data: industryProjects, isLoading: isLoadingIndustryProjects } =
     useGetIndustryProjectListQuery();
 

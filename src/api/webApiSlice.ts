@@ -5,6 +5,7 @@ import { HTTP_VERBS } from '../utils/httpVerbs';
 import type { Experience } from '../types/experience';
 import type { Education } from '../types/education';
 import type { Certificate } from '../types/certificate';
+import type { Skill } from '../types/skill';
 
 
 export interface ContactPayload {
@@ -60,6 +61,12 @@ export const webApiSlice = createApi({
                 method: HTTP_VERBS.GET,
             }),
         }),
+        getSkillList: builder.query<Skill[], void>({
+            query: () => ({
+                url: '/skills',
+                method: HTTP_VERBS.GET,
+            }),
+        }),
     }),
 });
 
@@ -70,4 +77,5 @@ export const { useGetProjectListQuery,
     useGetCertificationListQuery,
     usePostContactMutation,
     useGetIndustryProjectListQuery,
+    useGetSkillListQuery
 } = webApiSlice;
