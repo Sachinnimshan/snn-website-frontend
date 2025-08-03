@@ -7,6 +7,7 @@ import * as SiIcons from "react-icons/si";
 import * as FaIcons from "react-icons/fa";
 import * as TbIcons from "react-icons/tb";
 import * as DiIcons from "react-icons/di";
+import { FaClock } from "react-icons/fa";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -34,6 +35,12 @@ const IconMapping = {
   ...DiIcons,
 };
 
+const levelColors: Record<string, string> = {
+  Beginner: "bg-gray-400 text-white",
+  Intermediate: "bg-yellow-500 text-white",
+  Advanced: "bg-green-600 text-white",
+};
+
 const Skills = () => {
   const { data: skills, isLoading } = useGetSkillListQuery();
 
@@ -51,63 +58,66 @@ const Skills = () => {
         {isLoading ? (
           <Loader loading={isLoading} />
         ) : (
-          skills?.map(({ name, icon }) => {
+          skills?.map(({ name, icon, level, yearsOfExperience }) => {
             const IconComponent = IconMapping[icon as keyof typeof IconMapping];
 
-            if (!IconComponent) {
-              return (
-                <motion.div
-                  key={name}
-                  className="
-                    bg-contentBgColor
-                    flex items-center gap-2 sm:gap-3
-                    border-2 p-3 sm:p-4 md:p-5
-                    rounded-lg
-                    hover:border-secondaryColor hover:text-secondaryColor
-                    transition-colors cursor-pointer
-                    min-w-[130px] sm:min-w-[155px] md:min-w-[180px]
-                    justify-center
-                    border-primaryWhiteColor
-                    text-thirdTextColor
-                  "
-                  variants={chipVariants}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <span className=" text-xs sm:text-sm md:text-base font-semibold uppercase">
-                    {name}
-                  </span>
-                </motion.div>
-              );
-            }
+            // Fallback color if level is unexpected
+            const levelClass = levelColors[level] || "bg-gray-300 text-black";
 
             return (
               <motion.div
                 key={name}
                 className="
                   bg-contentBgColor
-                  flex items-center gap-2 sm:gap-3
+                  flex flex-col items-center gap-1 sm:gap-1
                   border-2 p-3 sm:p-4 md:p-5
                   rounded-lg
                   hover:border-secondaryColor hover:text-secondaryColor
                   transition-colors cursor-pointer
-                  min-w-[130px] sm:min-w-[155px] md:min-w-[180px]
                   justify-center
                   border-primaryWhiteColor
                   text-thirdTextColor
+                  box-border
+                  shadow-sm
+                  min-w-[130px] sm:min-w-[155px] md:min-w-[180px]
                 "
                 variants={chipVariants}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <IconComponent
-                  className="text-secondaryColor"
-                  size={22}
-                  style={{ minWidth: 20, minHeight: 20 }}
-                />
-                <span className=" text-xs sm:text-sm md:text-base font-semibold uppercase">
+                {IconComponent ? (
+                  <IconComponent
+                    className="text-secondaryColor bg-primaryWhiteColor rounded-lg p-2"
+                    size={30}
+                    style={{ minWidth: 48, minHeight: 48 }}
+                    aria-label={`${name} icon`}
+                  />
+                ) : (
+                  <div className="w-8 h-8" aria-hidden="true" />
+                )}
+
+                <span className="text-sm sm:text-base font-semibold uppercase text-center">
                   {name}
                 </span>
+
+                <span
+                  className={`px-2 py-1 text-xs rounded-full font-medium select-none ${levelClass}`}
+                  title={`Skill Level: ${level}`}
+                  aria-label={`Skill level: ${level}`}
+                >
+                  {level}
+                </span>
+
+                <div
+                  className="flex items-center gap-1 text-xs text-gray-400"
+                  aria-label={`Years of experience: ${yearsOfExperience}`}
+                >
+                  <FaClock size={14} aria-hidden="true" />
+                  <span>
+                    {yearsOfExperience}{" "}
+                    {yearsOfExperience === 1 ? "year" : "years"}
+                  </span>
+                </div>
               </motion.div>
             );
           })
