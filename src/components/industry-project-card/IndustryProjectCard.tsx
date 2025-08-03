@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import type { CommercialProject } from "../../configs/industryProjects";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { IoMdArrowDropright } from "react-icons/io";
+import type { CommercialProject } from "../../types/projects";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },

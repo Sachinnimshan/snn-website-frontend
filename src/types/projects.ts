@@ -14,3 +14,14 @@ export interface Project {
     createdAt: string;
     updatedAt: string;
 }
+
+export interface CommercialProject {
+    id: number;
+    title: string;
+    client: string;
+    period: string;
+    tasks: string[];
+    technologies: string[];
+    image?: string;
+    website?: string; // Optional website URL
+}

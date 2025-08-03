@@ -1,21 +1,24 @@
 import { useState } from "react";
-import { useGetProjectListQuery } from "../api/webApiSlice";
+import {
+  useGetIndustryProjectListQuery,
+  useGetProjectListQuery,
+} from "../api/webApiSlice";
 import Loader from "../components/loader/Loader";
 import PageWrapper from "../components/page-wrapper/PageWrapper";
 import ProjectCard from "../components/project-card/ProjectCard";
 import IndustryProjectCard from "../components/industry-project-card/IndustryProjectCard";
 import ProjectsToggle from "../components/projects-toggle/ProjectsToggle";
-
-import { commercialProjects } from "../configs/industryProjects";
 import IotProjectCard from "../components/iot-card/IotProjectCard";
 import { iotProjects } from "../configs/iot";
 
 export default function Projects() {
-  const { data: personalProjects, isLoading } =
+  const { data: personalProjects, isLoading: isLoadingProjects } =
     useGetProjectListQuery(undefined);
   const [projectCategory, setProjectCategory] = useState<
     "commercial" | "personal" | "iot"
   >("commercial");
+  const { data: industryProjects, isLoading: isLoadingIndustryProjects } =
+    useGetIndustryProjectListQuery();
 
   return (
     <PageWrapper
@@ -38,12 +41,12 @@ export default function Projects() {
         onChange={setProjectCategory}
       />
 
-      {isLoading && projectCategory === "personal" ? (
-        <Loader loading={isLoading} />
+      {isLoadingProjects && projectCategory === "personal" ? (
+        <Loader loading={isLoadingProjects || isLoadingIndustryProjects} />
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
           {projectCategory === "commercial" &&
-            commercialProjects.map((project, i) => (
+            industryProjects?.map((project, i) => (
               <IndustryProjectCard key={project.id} project={project} i={i} />
             ))}
 

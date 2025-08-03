@@ -1,9 +1,10 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import type { Project } from '../types/projects';
+import type { CommercialProject, Project } from '../types/projects';
 import baseURL from '../utils/config';
 import { HTTP_VERBS } from '../utils/httpVerbs';
 import type { Experience } from '../types/experience';
 import type { Education } from '../types/education';
+import type { Certificate } from '../types/certificate';
 
 
 export interface ContactPayload {
@@ -47,7 +48,26 @@ export const webApiSlice = createApi({
                 body: payload,
             }),
         }),
+        getCertificationList: builder.query<Certificate[], void>({
+            query: () => ({
+                url: '/certifications',
+                method: HTTP_VERBS.GET,
+            }),
+        }),
+        getIndustryProjectList: builder.query<CommercialProject[], void>({
+            query: () => ({
+                url: '/industryprojects',
+                method: HTTP_VERBS.GET,
+            }),
+        }),
     }),
 });
 
-export const { useGetProjectListQuery, useGetProjectDetailsQuery, useGetExperienceListQuery, useGetAcademicListQuery, usePostContactMutation } = webApiSlice;
+export const { useGetProjectListQuery,
+    useGetProjectDetailsQuery,
+    useGetExperienceListQuery,
+    useGetAcademicListQuery,
+    useGetCertificationListQuery,
+    usePostContactMutation,
+    useGetIndustryProjectListQuery,
+} = webApiSlice;

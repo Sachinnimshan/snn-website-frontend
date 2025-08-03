@@ -1,15 +1,5 @@
-// src/config/commercialProjects.ts
+import type { CommercialProject } from "../types/projects";
 
-export interface CommercialProject {
-    id: number;
-    title: string;
-    client: string;
-    period: string;
-    tasks: string[];
-    technologies: string[];
-    image?: string;
-    website?: string; // Optional website URL
-}
 
 export const commercialProjects: CommercialProject[] = [
     {
