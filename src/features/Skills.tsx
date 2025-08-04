@@ -8,6 +8,8 @@ import * as FaIcons from "react-icons/fa";
 import * as TbIcons from "react-icons/tb";
 import * as DiIcons from "react-icons/di";
 import { FaClock } from "react-icons/fa";
+import SkillToggle from "../components/skill-toggle/SkillToggle";
+import { useState } from "react";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -40,15 +42,34 @@ const levelColors: Record<string, string> = {
   Intermediate: "bg-yellow-500 text-white",
   Advanced: "bg-green-600 text-white",
 };
+const levels = ["Advanced", "Intermediate", "Beginner"] as const;
 
 const Skills = () => {
   const { data: skills, isLoading } = useGetSkillListQuery();
+  const [selectedLevels, setSelectedLevels] = useState<string[]>([...levels]);
+
+  // Toggle level in filter list
+  const toggleLevel = (level: string) => {
+    setSelectedLevels((prev) =>
+      prev.includes(level) ? prev.filter((l) => l !== level) : [...prev, level]
+    );
+  };
+
+  // Filter skills based on selectedLevels
+  const filteredSkills =
+    skills?.filter((skill) => selectedLevels.includes(skill.level)) || [];
 
   return (
     <PageWrapper
       title="Skills"
       description="My skills and technologies I work with"
     >
+      <SkillToggle
+        selectedLevels={selectedLevels}
+        toggleLevel={toggleLevel}
+        levels={levels}
+        levelColors={levelColors}
+      />
       <motion.div
         className="flex flex-wrap gap-4 sm:gap-5 md:gap-2 justify-center"
         variants={containerVariants}
@@ -58,16 +79,18 @@ const Skills = () => {
         {isLoading ? (
           <Loader loading={isLoading} />
         ) : (
-          skills?.map(({ name, icon, level, yearsOfExperience }) => {
+          filteredSkills?.map(({ name, icon, level, yearsOfExperience }) => {
             const IconComponent = IconMapping[icon as keyof typeof IconMapping];
 
-            // Fallback color if level is unexpected
-            const levelClass = levelColors[level] || "bg-gray-300 text-black";
+            const levelClass =
+              levelColors[level] ||
+              "bg-primaryWhiteColor text-primaryTextColor";
 
             return (
               <motion.div
                 key={name}
                 className="
+                  relative  
                   bg-contentBgColor
                   flex flex-col items-center gap-1 sm:gap-1
                   border-2 p-3 sm:p-4 md:p-5
@@ -95,13 +118,12 @@ const Skills = () => {
                 ) : (
                   <div className="w-8 h-8" aria-hidden="true" />
                 )}
-
-                <span className="text-sm sm:text-base font-semibold uppercase text-center">
+                <span className="text-sm sm:text-sm font-semibold uppercase text-center">
                   {name}
                 </span>
 
                 <span
-                  className={`px-2 py-1 text-xs rounded-full font-medium select-none ${levelClass}`}
+                  className={`px-2 py-1 text-xs rounded-lg font-medium select-none ${levelClass}`}
                   title={`Skill Level: ${level}`}
                   aria-label={`Skill level: ${level}`}
                 >
