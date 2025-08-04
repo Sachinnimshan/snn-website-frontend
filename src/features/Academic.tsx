@@ -8,7 +8,6 @@ import {
 } from "react-vertical-timeline-component";
 import Loader from "../components/loader/Loader";
 import { APP_COLORS } from "../utils/theme";
-import { IoMedalOutline } from "react-icons/io5";
 import { useSelector } from "react-redux";
 import type { RootState } from "../store/store";
 import { IoMdArrowDropright } from "react-icons/io";
@@ -53,10 +52,19 @@ const Academic = () => {
               className="dark:bg-gray-900 dark:text-gray-100"
               dateClassName="text-primaryTextColor dark:text-secondaryColor font-semibold"
             >
-              <h3 className="flex items-center gap-2 text-lg font-bold mb-4 text-primaryTextColor">
+              <h3 className="flex items-center gap-2 text-lg font-bold text-primaryTextColor">
                 {item.title}
               </h3>
-
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.cardiffmet.ac.uk/"
+                className="text-secondaryColor inline-flex items-center gap-2 py-2 rounded-lg font-semibold uppercase text-sm cursor-pointer"
+                aria-label={`University: ${item.university}`}
+              >
+                {/* <IoMedalOutline size={20} aria-hidden="true" /> */}
+                {item.university}
+              </a>
               <ul className="text-base text-thirdTextColor dark:text-gray-300 space-y-3 mb-6">
                 {item.syllabus.map(
                   (point, idx) =>
@@ -77,26 +85,14 @@ const Academic = () => {
                 )}
               </ul>
 
-              <div className="flex flex-wrap gap-4 mt-4">
-                <span
-                  className="bg-secondaryColor text-primaryWhiteColor inline-flex items-center gap-2 px-5 py-2 rounded-lg font-semibold uppercase text-sm cursor-default select-none border border-transparent shadow-md"
-                  aria-label={`Grade: ${item.grade}`}
-                  style={{ userSelect: "none" }}
-                >
-                  <GiGraduateCap size={20} aria-hidden="true" />
-                  {item.grade}
-                </span>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://www.cardiffmet.ac.uk/"
-                  className="bg-primaryWhiteColor text-secondaryColor inline-flex items-center gap-2 px-5 py-2 rounded-lg font-semibold uppercase text-sm cursor-pointer border-2 border-secondaryColor shadow-md transition-colors duration-200 ease-in-out hover:bg-secondaryColor hover:text-primaryWhiteColor focus:outline-none focus:ring-4 focus:ring-secondaryColor dark:focus:ring-yellow-500"
-                  aria-label={`University: ${item.university}`}
-                >
-                  <IoMedalOutline size={20} aria-hidden="true" />
-                  {item.university}
-                </a>
-              </div>
+              <span
+                className="bg-secondaryColor text-primaryWhiteColor inline-flex items-center gap-2 px-5 py-2 rounded-lg font-semibold uppercase text-sm cursor-default select-none border border-transparent shadow-md"
+                aria-label={`Grade: ${item.grade}`}
+                style={{ userSelect: "none" }}
+              >
+                <GiGraduateCap size={20} aria-hidden="true" />
+                {item.grade}
+              </span>
             </VerticalTimelineElement>
           ))}
         </VerticalTimeline>
