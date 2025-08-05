@@ -1,23 +1,12 @@
 import { FaDownload } from "react-icons/fa";
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { personalInfo } from "../configs/common";
 
 export default function Home() {
   return (
     <div className="bg-triangle-bg bg-no-repeat bg-cover bg-center relative text-white min-h-screen flex items-center justify-center px-4 sm:px-4 py-8">
-      <motion.div
-        className="w-full max-w-6xl  p-4 sm:p-6 md:p-8 z-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-      >
-        <motion.div
-          className="flex flex-col items-center text-center"
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.8 }}
-        >
+      <div className="w-full max-w-6xl  p-4 sm:p-6 md:p-8 z-10">
+        <div className="flex flex-col items-center text-center">
           <h1 className="text-5xl sm:text-2xl md:text-6xl font-bold leading-tight text-primaryTextColor uppercase drop-shadow-lg tracking-wider">
             Hey, I'm {personalInfo.name}
           </h1>
@@ -51,8 +40,8 @@ export default function Home() {
               Download Resume
             </a>
           </div>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     </div>
   );
 }

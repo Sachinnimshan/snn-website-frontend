@@ -11,10 +11,6 @@ export const personalInfo = {
     location: "Walasmulla, Sri Lanka",
     socialMediaLinks: [
         {
-            icon: FaGithub, // reference component only
-            url: "https://github.com/your-username",
-        },
-        {
             icon: FaLinkedin,
             url: "https://www.linkedin.com/in/sachin-nimshan/",
         },
@@ -25,6 +21,10 @@ export const personalInfo = {
         {
             icon: FaYoutube,
             url: "https://www.youtube.com/@sachinnimshan/featured",
+        },
+        {
+            icon: FaGithub, // reference component only
+            url: "https://github.com/your-username",
         },
     ],
 };
