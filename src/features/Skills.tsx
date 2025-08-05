@@ -102,7 +102,7 @@ const Skills = () => {
                   text-thirdTextColor
                   box-border
                   shadow-sm
-                  min-w-[130px] sm:min-w-[155px] md:min-w-[180px]
+                  min-w-[100px]
                 "
                 variants={chipVariants}
                 whileHover={{ scale: 1.05 }}

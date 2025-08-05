@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { personalInfo } from "../../configs/common";
 
 interface PageWrapperProps {
   title?: string;
@@ -15,8 +16,8 @@ export default function PageWrapper({
 }: PageWrapperProps) {
   useEffect(() => {
     document.title = title
-      ? `${title} - Sachin Nimshan`
-      : "Sachin Nimshan - Offical website";
+      ? `${title} | ${personalInfo.name}`
+      : `${personalInfo.name} - Official website`;
   }, [title]);
   return (
     <div
