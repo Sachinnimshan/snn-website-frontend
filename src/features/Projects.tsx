@@ -24,6 +24,10 @@ export default function Projects() {
     { data: industryProjects, isLoading: isLoadingIndustryProjects },
   ] = useLazyGetIndustryProjectListQuery();
 
+  const isLoading =
+    (projectCategory === "commercial" && isLoadingIndustryProjects) ||
+    (projectCategory === "personal" && isLoadingProjects);
+
   useEffect(() => {
     if (projectCategory === "personal") {
       triggerPersonalProjects();
@@ -54,9 +58,8 @@ export default function Projects() {
         onChange={setProjectCategory}
       />
 
-      {isLoadingProjects ||
-      (isLoadingIndustryProjects && projectCategory === "personal") ? (
-        <Loader loading={isLoadingProjects || isLoadingIndustryProjects} />
+      {isLoading ? (
+        <Loader loading={isLoading} />
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
           {projectCategory === "commercial" &&
