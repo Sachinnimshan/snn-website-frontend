@@ -11,7 +11,7 @@ import { APP_COLORS } from "../utils/theme";
 import { useSelector } from "react-redux";
 import type { RootState } from "../store/store";
 import { IoMdArrowDropright } from "react-icons/io";
-import { GiGraduateCap } from "react-icons/gi";
+import { IoMedalOutline } from "react-icons/io5";
 
 const Academic = () => {
   const selectedColor = useSelector(
@@ -53,7 +53,7 @@ const Academic = () => {
               dateClassName="text-primaryTextColor dark:text-secondaryColor font-semibold"
             >
               <h3 className="flex items-center gap-2 text-lg font-bold text-primaryTextColor">
-                {item.title}
+                {item.title} / {item.grade}
               </h3>
               <a
                 target="_blank"
@@ -62,7 +62,7 @@ const Academic = () => {
                 className="text-secondaryColor inline-flex items-center gap-2 py-2 rounded-lg font-semibold uppercase text-sm cursor-pointer"
                 aria-label={`University: ${item.university}`}
               >
-                {/* <IoMedalOutline size={20} aria-hidden="true" /> */}
+                <IoMedalOutline size={20} aria-hidden="true" />
                 {item.university}
               </a>
               <ul className="text-base text-thirdTextColor dark:text-gray-300 space-y-3 mb-6">
@@ -84,15 +84,6 @@ const Academic = () => {
                     )
                 )}
               </ul>
-
-              <span
-                className="bg-secondaryColor text-primaryWhiteColor inline-flex items-center gap-2 px-5 py-2 rounded-lg font-semibold uppercase text-sm cursor-default select-none border border-transparent shadow-md"
-                aria-label={`Grade: ${item.grade}`}
-                style={{ userSelect: "none" }}
-              >
-                <GiGraduateCap size={20} aria-hidden="true" />
-                {item.grade}
-              </span>
             </VerticalTimelineElement>
           ))}
         </VerticalTimeline>
