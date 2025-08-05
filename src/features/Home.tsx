@@ -30,10 +30,10 @@ export default function Home() {
 
         <p
           className="
-          mt-4 sm:mt-5 text-gray-600
-          text-sm sm:text-base md:text-lg lg:text-xl
-          leading-relaxed max-w-xl sm:max-w-3xl md:max-w-5xl mx-auto
-          "
+         mt-4 sm:mt-5 text-primaryTextColor
+         text-sm sm:text-base md:text-xl
+         leading-relaxed max-w-prose mx-auto
+         font-normal"
         >
           {personalInfo.description}
         </p>
