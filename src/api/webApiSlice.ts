@@ -23,24 +23,29 @@ export const webApiSlice = createApi({
                 url: '/projects',
                 method: HTTP_VERBS.GET,
             }),
+            keepUnusedDataFor: 600,
+
         }),
         getProjectDetails: builder.query<Project, string>({
             query: (id) => ({
                 url: `/projects/${id}`,
                 method: HTTP_VERBS.GET,
             }),
+            keepUnusedDataFor: 600,
         }),
         getExperienceList: builder.query<Experience[], void>({
             query: () => ({
                 url: '/experience',
                 method: HTTP_VERBS.GET,
             }),
+            keepUnusedDataFor: 600,
         }),
         getAcademicList: builder.query<Education[], void>({
             query: () => ({
                 url: '/education',
                 method: HTTP_VERBS.GET,
             }),
+            keepUnusedDataFor: 600,
         }),
         postContact: builder.mutation<void, ContactPayload>({
             query: (payload) => ({
@@ -54,28 +59,32 @@ export const webApiSlice = createApi({
                 url: '/certifications',
                 method: HTTP_VERBS.GET,
             }),
+            keepUnusedDataFor: 600,
         }),
         getIndustryProjectList: builder.query<CommercialProject[], void>({
             query: () => ({
                 url: '/industryprojects',
                 method: HTTP_VERBS.GET,
             }),
+            keepUnusedDataFor: 600,
         }),
         getSkillList: builder.query<Skill[], void>({
             query: () => ({
                 url: '/skills',
                 method: HTTP_VERBS.GET,
             }),
+            keepUnusedDataFor: 600,
         }),
     }),
 });
 
-export const { useGetProjectListQuery,
+export const {
+    useLazyGetProjectListQuery,
+    useLazyGetIndustryProjectListQuery,
     useGetProjectDetailsQuery,
     useGetExperienceListQuery,
     useGetAcademicListQuery,
     useGetCertificationListQuery,
     usePostContactMutation,
-    useGetIndustryProjectListQuery,
     useGetSkillListQuery
 } = webApiSlice;

@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
-  useGetIndustryProjectListQuery,
-  useGetProjectListQuery,
+  useLazyGetIndustryProjectListQuery,
+  useLazyGetProjectListQuery,
 } from "../api/webApiSlice";
 import Loader from "../components/loader/Loader";
 import PageWrapper from "../components/page-wrapper/PageWrapper";
@@ -15,10 +15,23 @@ export default function Projects() {
   const [projectCategory, setProjectCategory] = useState<
     "commercial" | "personal" | "iot"
   >("commercial");
-  const { data: personalProjects, isLoading: isLoadingProjects } =
-    useGetProjectListQuery(undefined);
-  const { data: industryProjects, isLoading: isLoadingIndustryProjects } =
-    useGetIndustryProjectListQuery();
+  const [
+    triggerPersonalProjects,
+    { data: personalProjects, isLoading: isLoadingProjects },
+  ] = useLazyGetProjectListQuery(undefined);
+  const [
+    triggerIndustryProjects,
+    { data: industryProjects, isLoading: isLoadingIndustryProjects },
+  ] = useLazyGetIndustryProjectListQuery();
+
+  useEffect(() => {
+    if (projectCategory === "personal") {
+      triggerPersonalProjects();
+    }
+    if (projectCategory === "commercial") {
+      triggerIndustryProjects();
+    }
+  }, [projectCategory, triggerPersonalProjects, triggerIndustryProjects]);
 
   return (
     <PageWrapper

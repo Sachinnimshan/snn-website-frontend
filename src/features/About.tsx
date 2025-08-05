@@ -10,6 +10,7 @@ export default function About() {
     useGetAcademicListQuery();
   const { data: experiences, isLoading: experiencesLoading } =
     useGetExperienceListQuery(undefined);
+
   return (
     <PageWrapper title="About Me" description="Get to know me better">
       {academicsLoading || experiencesLoading ? (
