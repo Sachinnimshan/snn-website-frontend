@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="bg-triangle-bg bg-no-repeat bg-cover bg-center relative text-white min-h-screen flex items-center text-center justify-center px-4 sm:px-4 py-8">
       <div className="w-full max-w-6xl  p-4 sm:p-6 md:p-8 z-10">
-        <h1 className="text-5xl sm:text-2xl md:text-6xl font-bold leading-tight text-primaryTextColor uppercase drop-shadow-lg tracking-wider">
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight text-primaryTextColor uppercase tracking-wider">
           Hey, I'm {personalInfo.name}
         </h1>
         <h2 className="text-lg sm:text-2xl md:text-3xl font-semibold mt-2 sm:mt-5 text-gray-700 drop-shadow-md">
