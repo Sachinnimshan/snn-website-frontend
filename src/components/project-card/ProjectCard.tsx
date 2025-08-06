@@ -24,7 +24,7 @@ const ProjectCard = ({ project, i }: ProjectCardProps) => {
     <div>
       <motion.div
         key={project._id}
-        className="shadow-sm bg-contentBgColor border-primaryWhiteColor rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col border hover:shadow-md border-2"
+        className="shadow-sm bg-contentBgColor border-primaryWhiteColor rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col border hover:shadow-md border-2 cursor-pointer"
         initial="hidden"
         custom={i}
         animate="visible"
@@ -36,23 +36,25 @@ const ProjectCard = ({ project, i }: ProjectCardProps) => {
             src={project.image}
             alt={project.title}
             className="w-full h-48 object-cover"
+            loading="lazy"
           />
         )}
         <div className="p-4 flex-grow">
-          <h2 className="text-xl font-semibold text-primaryTextColor dark:text-white mb-1">
+          <h2 className="text-lg sm:text-xl font-semibold text-primaryTextColor dark:text-white mb-1">
             {project.title}
           </h2>
-          <p className="text-secondaryTextColor font-base dark:text-gray-300 text-base leading-relaxed">
+          <p className="text-secondaryTextColor text-sm sm:text-base dark:text-gray-300 leading-relaxed">
             {truncateText(project.description)}
           </p>
         </div>
-        <div className="p-4 pt-0 flex gap-3">
+        <div className="p-4 pt-0 flex gap-3 flex-wrap">
           {project.demo && (
             <a
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-secondaryBgColor flex items-center gap-1 px-3 py-1 text-sm rounded-lg font-semibold border-2 border-blue-400 text-blue-500 hover:bg-blue-50 dark:hover:bg-gray-700 transition"
+              className="bg-secondaryBgColor flex items-center gap-1 px-3 py-1 text-xs sm:text-sm rounded-lg font-semibold border-2 border-blue-400 text-blue-500 hover:bg-blue-50 dark:hover:bg-gray-700 transition"
+              onClick={(e) => e.stopPropagation()}
             >
               <FaGlobe size={16} />
               Live
@@ -63,7 +65,8 @@ const ProjectCard = ({ project, i }: ProjectCardProps) => {
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-secondaryBgColor flex items-center gap-1 px-3 py-1 text-sm font-semibold rounded-lg border-2 border-green-700 text-green-700 dark:border-green-600 hover:bg-green-100 dark:hover:bg-gray-700 transition"
+              className="bg-secondaryBgColor flex items-center gap-1 px-3 py-1 text-xs sm:text-sm font-semibold rounded-lg border-2 border-green-700 text-green-700 dark:border-green-600 hover:bg-green-100 dark:hover:bg-gray-700 transition"
+              onClick={(e) => e.stopPropagation()}
             >
               <FaGithub size={16} />
               GitHub
@@ -74,7 +77,8 @@ const ProjectCard = ({ project, i }: ProjectCardProps) => {
               href={project.youtube}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-secondaryBgColor flex items-center gap-1 px-3 py-1 text-sm  font-semibold rounded-lg border-2 border-red-400 text-red-500 hover:bg-red-50 dark:hover:bg-gray-700 transition"
+              className="bg-secondaryBgColor flex items-center gap-1 px-3 py-1 text-xs sm:text-sm font-semibold rounded-lg border-2 border-red-400 text-red-500 hover:bg-red-50 dark:hover:bg-gray-700 transition"
+              onClick={(e) => e.stopPropagation()}
             >
               <FaYoutube size={16} />
               YouTube

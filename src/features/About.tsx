@@ -16,7 +16,7 @@ export default function About() {
       {academicsLoading || experiencesLoading ? (
         <Loader loading={academicsLoading || experiencesLoading} />
       ) : (
-        <div className="mx-auto text-secondaryTextColor dark:text-gray-200 space-y-6 leading-relaxed font-medium text-base sm:text-lg md:text-lg text-justify">
+        <div className="mx-auto text-secondaryTextColor dark:text-gray-200 space-y-6 leading-relaxed font-medium text-sm sm:text-base md:text-lg text-justify">
           <p>
             I am a{" "}
             <span className="font-medium text-secondaryTextColor font-semibold">

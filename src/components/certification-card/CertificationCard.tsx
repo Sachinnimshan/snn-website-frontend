@@ -17,19 +17,19 @@ const CertificationCard = ({ certificate, idx }: CertificationCardProps) => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: idx * 0.15 }}
-        className="cursor-pointer bg-contentBgColor border-2 border-primaryWhiteColor rounded-xl shadow  transition duration-300 p-6 flex flex-col gap-4 relative"
+        className="cursor-pointer bg-contentBgColor border-2 border-primaryWhiteColor rounded-xl shadow transition duration-300 p-6 flex flex-col gap-4 relative"
       >
         <div className="mt-3">
-          <h2 className="text-xl font-semibold text-primaryTextColor mb-1">
+          <h2 className="text-lg sm:text-xl font-semibold text-primaryTextColor mb-1">
             {certificate.title}
           </h2>
-          <p className="text-sm font-semibold text-secondaryColor uppercase">
+          <p className="text-xs sm:text-sm font-semibold text-secondaryColor uppercase">
             {certificate.issuer}
           </p>
-          <p className="text-sm text-thirdTextColor font-medium mb-2 mt-1 uppercase">
+          <p className="text-xs sm:text-sm text-thirdTextColor font-medium mb-2 mt-1 uppercase">
             {certificate.date}
           </p>
-          <p className="text-thirdTextColor text-base mb-4">
+          <p className="text-sm sm:text-base text-thirdTextColor mb-4">
             {truncateText(certificate.description, 175)}
           </p>
           {certificate.link ? (
@@ -37,7 +37,7 @@ const CertificationCard = ({ certificate, idx }: CertificationCardProps) => {
               href={certificate.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="uppercase inline-flex text-sm items-center gap-2 px-4 py-2 mt-2 bg-secondaryColor shadow hover:bg-secondaryTextColor text-primaryWhiteColor  font-semibold rounded-lg transition shadow focus:outline-none"
+              className="uppercase inline-flex text-xs sm:text-sm items-center gap-2 px-4 py-2 mt-2 bg-secondaryColor shadow hover:bg-secondaryTextColor text-primaryWhiteColor font-semibold rounded-lg transition shadow focus:outline-none"
             >
               View Certificate
               <FaExternalLinkAlt className="w-3.5 h-3.5" />

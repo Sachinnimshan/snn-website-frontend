@@ -17,7 +17,7 @@ function ProjectsToggle<T extends string>({
         <button
           key={label}
           type="button"
-          className={`px-6 py-2 rounded-lg font-semibold uppercase transition border-2 border-transparent ${
+          className={`px-5 py-2 rounded-lg font-semibold uppercase transition border-2 border-transparent text-sm sm:text-base ${
             selectedValue === value
               ? "bg-secondaryColor text-primaryWhiteColor shadow-lg"
               : "bg-contentBgColor text-thirdTextColor hover:border-secondaryColor hover:text-secondaryColor"

@@ -31,18 +31,16 @@ const IndustryProjectCard = ({ project, i }: IndustryProjectCardProps) => {
     >
       <div className="flex items-center justify-between mb-2">
         <div>
-          <h3 className="text-xl font-semibold text-primaryTextColor">
+          <h3 className="text-lg sm:text-xl font-semibold text-primaryTextColor">
             {project.title}
           </h3>
           <a
             href={project.website}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-base text-secondaryColor font-semibold uppercase mt-1"
+            className="text-xs sm:text-base text-secondaryColor font-semibold uppercase mt-1 inline-flex items-center gap-2"
           >
-            <span className="inline-flex items-center gap-2 mt-2">
-              {project.client} <FaExternalLinkAlt className="w-3.5 h-3.5" />
-            </span>
+            {project.client} <FaExternalLinkAlt className="w-3.5 h-3.5" />
           </a>
         </div>
         {project.image && (
@@ -55,10 +53,12 @@ const IndustryProjectCard = ({ project, i }: IndustryProjectCardProps) => {
         )}
       </div>
 
-      <p className="text-secondaryTextColor text-sm mb-3">{project.period}</p>
+      <p className="text-secondaryTextColor text-xs sm:text-sm mb-3">
+        {project.period}
+      </p>
 
       {/* Tasks list with icon bullets */}
-      <ul className="text-secondaryTextColor text-base leading-relaxed flex-grow mb-4 space-y-2">
+      <ul className="text-secondaryTextColor text-sm sm:text-base leading-relaxed flex-grow mb-4 space-y-2">
         {project.tasks.map((task, idx) => (
           <li key={idx} className="flex items-start gap-2">
             <IoMdArrowDropright className="mt-1 min-w-[1.25rem] text-secondaryColor flex-shrink-0" />
@@ -71,7 +71,7 @@ const IndustryProjectCard = ({ project, i }: IndustryProjectCardProps) => {
         {project.technologies.map((tech) => (
           <span
             key={tech}
-            className="text-xs uppercase bg-secondaryBgColor text-thirdTextColor px-3 py-1 rounded-full font-semibold shadow-sm transition hover:bg-secondaryColor hover:text-white"
+            className="text-[9px] sm:text-xs uppercase bg-secondaryBgColor text-thirdTextColor px-3 py-1 rounded-full font-semibold shadow-sm transition hover:bg-secondaryColor hover:text-white"
           >
             {tech}
           </span>
